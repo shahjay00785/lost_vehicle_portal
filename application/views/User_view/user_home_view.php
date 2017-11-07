@@ -7,14 +7,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Free Cars-Online Website Template | Home :: w3layouts</title>
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<title>Home</title>
+<link href="<?php echo base_url('Assests/User_template/css/style.css'); ?>" rel="stylesheet" type="text/css" media="all" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href='//fonts.googleapis.com/css?family=Playball' rel='stylesheet' type='text/css'>
 <!--slider-->
-<script src="js/jquery.min.js"></script>
-<script src="js/script.js" type="text/javascript"></script>
+<script src="<?php echo base_url('Assests/User_template/js/jquery.min.js'); ?>"></script>
+<script src="<?php echo base_url('Assests/User_template/js/script.js'); ?>" type="text/javascript"></script>
 
 </head>
 <body>
@@ -23,20 +23,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<div class="h-bg">
 			<div class="total">
 				<div class="header">
-					<div class="box_header_user_menu">
-						<ul class="user_menu"><li class="act first"><a href="#"><div class="button-t"><span>Shipping &amp; Returns</span></div></a></li><li class=""><a href="#"><div class="button-t"><span>Advanced Search</span></div></a></li><li class=""><a href="#"><div class="button-t"><span>Create an Account</span></div></a></li><li class="last"><a href="#"><div class="button-t"><span>Log in</span></div></a></li></ul>
-					</div>
+
 					<div class="header-right">
-						<ul class="follow_icon">
-							<li><a href="#"><img src="images/icon.png" alt=""/></a></li>
-							<li><a href="#"><img src="images/icon1.png" alt=""/></a></li>
-							<li><a href="#"><img src="images/icon2.png" alt=""/></a></li>
-							<li><a href="#"><img src="images/icon3.png" alt=""/></a></li>
-						</ul>
+
 					</div><div class="clear"></div>
 					<div class="header-bot">
 						<div class="logo">
-							<a href="index.html"><img src="images/logo.png" alt=""/></a>
+							<a href="index.html"><img src="<?php echo base_url('Assests/User_template/images/logo.png');?>" alt=""/></a>
 						</div>
 						<div class="search">
 						    <input type="text" class="textbox" value="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}">
@@ -50,8 +43,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<ul>
 						<li class="active"><a href="index.html">Home</a></li>
 						<li><a href="about.html">About</a></li>
-						<li><a href="specials.html">Specials</a></li>
-						<li><a href="new.html">New</a></li>
+						<li><a href="specials.html">Missing Vehicle</a></li>
+						<li><a href="new.html">Found Vehicle</a></li>
 						<li><a href="contact.html">Contact</a></li>
 					</ul>
 					<div class="clear"></div>
@@ -62,10 +55,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				 <div class="header_bottom_right_images">
 				     	<div id="slideshow">
 							<ul class="slides">
-						    	<li><a href="details.html"><canvas ></canvas><img src="images/banner4.jpg" alt="Marsa Alam underawter close up" ></a></li>
-						        <li><a href="details.html"><canvas></canvas><img src="images/banner2.jpg" alt="Turrimetta Beach - Dawn" ></a></li>
-						        <li><a href="details.html"><canvas></canvas><img src="images/banner3.jpg" alt="Power Station" ></a></li>
-						        <li><a href="details.html"><canvas></canvas><img src="images/banner1.jpg" alt="Colors of Nature" ></a></li>
+						    	<li><a href="details.html"><canvas ></canvas><img src="<?php echo base_url('Assests/User_template/images/1.jpg');?>" alt="Marsa Alam underawter close up" ></a></li>
+						        <li><a href="details.html"><canvas></canvas><img src="<?php echo base_url('Assests/User_template/images/2.jpg');?>" alt="Turrimetta Beach - Dawn" ></a></li>
+						        <li><a href="details.html"><canvas></canvas><img src="<?php echo base_url('Assests/User_template/images/3.jpg');?>" alt="Power Station" ></a></li>
+						        <li><a href="details.html"><canvas></canvas><img src="<?php echo base_url('Assests/User_template/images/banner1.jpg');?>" alt="Colors of Nature" ></a></li>
 						    </ul>
 						    <span class="arrow previous"></span>
 						    <span class="arrow next"></span>
@@ -77,7 +70,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							 <div class="text">
 								<div class="grid_1_of_3 images_1_of_3">
 									<div class="grid_1">
-										<a href="single.html"><img src="images/pic5.jpg" title="continue reading" alt=""></a>
+										<a href="single.html"><img src="<?php echo base_url('Assests/User_template/images/pic5.jpg');?>" title="continue reading" alt=""></a>
 											<div class="grid_desc">
 												<p class="title">Lorem ipsum dolor sitconsectetuer adipiscing elit</p>
 												<p class="title1">Lorem ipsum dolor sitconsectetuer adipiscing elit</p>
@@ -273,7 +266,3 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 </div>
 </body>
 </html>
-
-
-
-            
