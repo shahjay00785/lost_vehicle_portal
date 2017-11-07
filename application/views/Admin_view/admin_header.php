@@ -155,7 +155,7 @@
         </li>
         <li class="divider"></li>
         <li>
-          <a href="<?php echo base_url('Admin_controller/Admin/manage_logout/logout'); ?>"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+          <a href="<?php echo base_url('index.php/Admin_controller/Admin/manage_logout/logout'); ?>"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
         </li>
       </ul>
     </li>

@@ -12,7 +12,7 @@ class Admin extends CI_Controller {
 	public function manage_category($parameter1="",$parameter2=""){
 		if(!isset($_SESSION["useremail"]))
 		{
-			redirect(base_url().'Admin_controller/Admin');
+			redirect(base_url().'index.php/Admin_controller/Admin');
 		}
 		else
 		{
@@ -615,7 +615,7 @@ class Admin extends CI_Controller {
 	public function manage_logout($parameter1=""){
 		if($parameter1=="logout"){
 			session_destroy();
-			redirect(base_url().'Admin_controller/Admin');
+			redirect(base_url().'index.php/Admin_controller/Admin');
 		}
 	}
 
