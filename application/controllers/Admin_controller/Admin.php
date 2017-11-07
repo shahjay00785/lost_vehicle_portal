@@ -10,7 +10,7 @@ class Admin extends CI_Controller {
 	}
 
 
- public function manage_user_side($parameter1=""){
+ public function manage_user_side($parameter1="",$parameter2=""){
 	 if(!isset($_SESSION["useremail"]))
 	 {
 		 redirect(base_url().'Admin_controller/Admin');
@@ -28,14 +28,15 @@ class Admin extends CI_Controller {
 	 }
 
 	 if($parameter1=="delete"){
-//		 $this->db->where('category_id',$parameter2);
-	//	 $this->db->delete('tbl_category');
-		 //redirect('Admin3/manage_category');
+		 $this->db->where('user_id',$parameter2);
+	 $this->db->delete('tbl_user_side');
+		 //redirect('Admin_controller/Admin/manage_user_side');
 	 }
 
 
 
-		 $this->load->view('Admin_view/user_side_view');
+	   $page_data['user_view']=$this->db->get('tbl_user_side');
+	   $this->load->view('Admin_view/user_side_view',$page_data);
 	 }
  }
 

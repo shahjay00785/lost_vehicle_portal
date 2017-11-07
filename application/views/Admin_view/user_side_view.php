@@ -72,10 +72,62 @@
 
               </div>
 
+
+
           </div>
           <!-- /.row -->
 
-            
+          <div class="col-lg-12">
+      <h2>User Views <a href="<?php echo base_url('index.php/Admin_controller/admin/manage_user_side'); ?>"> <img class="img-circle" src="<?php echo base_url('img/icon/add.png'); ?>" width="50px" height="50px">  </a></h2>
+      <div class="table-responsive">
+        <table class="table table-bordered table-hover table-striped">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Name</th>
+          <!--    <th>Category Image</th> -->
+              <th>Aadhar Number</th>
+              <th>Driving License</th>
+              <th>phone</th>
+              <th>Delete</th>
+              <th>Update</th>
+            </tr>
+          </thead>
+
+     <?php
+     $i=0;
+     foreach ($user_view->result() as $row_user)
+     {
+
+
+       $i++;
+       if($i%2==0){
+         ?>
+         <tr class="active">
+           <?php
+         }  else { ?>
+           <tr class="success">
+             <?php
+           }
+           ?>
+
+
+           <td><?php echo $row_user->user_id; ?></td>
+           <td><a href='<?php echo base_url()."index.php/Admin_controller/Admin/manage_user_side/".$row_user->user_id; ?>'><?php echo $row_user->user_name; ?></td>
+       <!--    <td><img src="<?php //echo base_url('img/category_img/').$row->cat_img; ?>" width='100'> </td> -->
+           <td><?php echo $row_user->user_aadhar_number; ?></td>
+           <td><?php echo $row_user->user_driving_license_number; ?></td>
+           <td><?php echo $row_user->user_phone_number; ?></td>
+           <td><a href="<?php echo base_url('index.php/Admin_controller/Admin/manage_user_side/delete/').$row_user->user_id; ?>"> <img class="img-circle" src="<?php echo base_url('img/icon/delete.png'); ?>" width="50px" height="50px"> </a> </td>
+           <td><a href="<?php echo base_url('index.php/Admin_controller/Admin/manage_category/edit/').$row_user->user_id; ?>"> <img class="img-circle" src="<?php echo base_url('img/icon/update.png'); ?>" width="50px" height="50px"></a> </td>
+         </tr>
+
+
+         <?php
+       }
+       ?>
+
+
 
 
       </div>
