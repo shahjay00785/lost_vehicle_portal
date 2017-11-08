@@ -47,6 +47,11 @@
                        </div>
 
                        <div class="form-group">
+                          <label>Vehicle Chasis Number</label>
+                          <input type="text" id="txt_vehicle_chasis_number" name="txt_vehicle_chasis_number" class="form-control">
+                       </div>
+
+                       <div class="form-group">
                           <label>User Driving License Number</label>
                           <input type="text" id="txt_user_driving_license_number" name="txt_user_driving_license_number" class="form-control">
                        </div>
@@ -58,15 +63,15 @@
 
                        <div class="form-group">
                                 <label>Vehicle Lost State</label>
-                                <select class="form-group">
-                                    <option>Gujarat</option>
+                                <select class="form-group" id="txt_lost_city_name" name="txt_lost_state_name">
+                                    <option value="Gujarat">Gujarat</option>
                                 </select>
                        </div>
 
                        <div class="form-group">
                                 <label>Vehicle Lost City</label>
-                                <select class="form-group">
-                                    <option>Gandinagr</option>
+                                <select class="form-group" id="txt_lost_city_name" name="txt_lost_city_name">
+                                    <option value="Gandhinagar">Gandinagr</option>
                                 </select>
                             </div>
 
@@ -100,18 +105,23 @@
           </div>
           <!-- /.row -->
 
-          <div class="col-lg-12">
-      <h2>User Views <a href="<?php echo base_url('index.php/Admin_controller/admin/manage_user_side'); ?>"> <img class="img-circle" src="<?php echo base_url('img/icon/add.png'); ?>" width="50px" height="50px">  </a></h2>
+  <div class="col-lg-12">
+      <h2>User Views <a href="<?php echo base_url('index.php/Admin_controller/admin/manage_vehicle_view'); ?>"> <img class="img-circle" src="<?php echo base_url('img/icon/add.png'); ?>" width="50px" height="50px">  </a></h2>
       <div class="table-responsive">
         <table class="table table-bordered table-hover table-striped">
           <thead>
             <tr>
               <th>#</th>
-              <th>Name</th>
-          <!--    <th>Category Image</th> -->
-              <th>Aadhar Number</th>
-              <th>Driving License</th>
-              <th>phone</th>
+              <th>Issue #</th>
+              <th>Engine #</th>
+              <th>Chasis #</th>
+              <th>License #</th>
+              <th>aadhar</th>
+              <th>Date</th>
+              <th>Time</th>
+              <th>State</th>
+              <th>City</th>
+
               <th>Delete</th>
               <th>Update</th>
             </tr>
@@ -119,7 +129,7 @@
 
      <?php
      $i=0;
-     foreach ($user_view->result() as $row_user)
+     foreach ($missing_vehicle_view->result() as $row_missing_vehicle)
      {
 
 
@@ -135,14 +145,19 @@
            ?>
 
 
-           <td><?php echo $row_user->user_id; ?></td>
-           <td><a href='<?php echo base_url()."index.php/Admin_controller/Admin/manage_user_side/".$row_user->user_id; ?>'><?php echo $row_user->user_name; ?></td>
-       <!--    <td><img src="<?php //echo base_url('img/category_img/').$row->cat_img; ?>" width='100'> </td> -->
-           <td><?php echo $row_user->user_aadhar_number; ?></td>
-           <td><?php echo $row_user->user_driving_license_number; ?></td>
-           <td><?php echo $row_user->user_phone_number; ?></td>
-           <td><a href="<?php echo base_url('index.php/Admin_controller/Admin/manage_user_side/delete/').$row_user->user_id; ?>"> <img class="img-circle" src="<?php echo base_url('img/icon/delete.png'); ?>" width="50px" height="50px"> </a> </td>
-           <td><a href="<?php echo base_url('index.php/Admin_controller/Admin/manage_category/edit/').$row_user->user_id; ?>"> <img class="img-circle" src="<?php echo base_url('img/icon/update.png'); ?>" width="50px" height="50px"></a> </td>
+           <td><?php echo $row_missing_vehicle->missing_vehicle_id; ?></td>
+           <td><?php echo $row_missing_vehicle->vehicle_issue_number; ?></td>
+           <td><?php echo $row_missing_vehicle->vehicle_engine_number; ?></td>
+           <td><?php echo $row_missing_vehicle->vehicle_chasis_number; ?></td>
+           <td><?php echo $row_missing_vehicle->user_driving_license_number; ?></td>
+           <td><?php echo $row_missing_vehicle->user_aadhar_number; ?></td>
+           <td><?php echo $row_missing_vehicle->vehicle_lost_date; ?></td>
+           <td><?php echo $row_missing_vehicle->vehicle_lost_time; ?></td>
+           <td><?php echo $row_missing_vehicle->vehicle_lost_state; ?></td>
+           <td><?php echo $row_missing_vehicle->vehicle_lost_city; ?></td>
+
+           <td><a href="<?php echo base_url('index.php/Admin_controller/Admin/manage_user_side/delete/').$row_missing_vehicle->missing_vehicle_id; ?>"> <img class="img-circle" src="<?php echo base_url('img/icon/delete.png'); ?>" width="50px" height="50px"> </a> </td>
+           <td><a href="<?php echo base_url('index.php/Admin_controller/Admin/manage_category/edit/').$row_missing_vehicle->missing_vehicle_id; ?>"> <img class="img-circle" src="<?php echo base_url('img/icon/update.png'); ?>" width="50px" height="50px"></a> </td>
          </tr>
 
 

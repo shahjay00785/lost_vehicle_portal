@@ -21,7 +21,7 @@
           <a href="<?php echo base_url('index.php/Admin_controller/Admin/manage_found_vehicle'); ?>">Found Vehicle Info</a>
         </li>
         <li>
-          <a href="<?php echo base_url('index.php/Admin_controller/Admin/manage_FIR_request'); ?>">FIR Request</a>
+          <a href="<?php echo base_url('index.php/Admin_controller/Admin/manage_rto_database'); ?>">RTO Database</a>
         </li>
 
 
@@ -31,8 +31,21 @@
 
           <li class="">
             <a href="<?php echo base_url('index.php/Admin_controller/Admin/search_bar'); ?>"><i class="fa fa-fw fa-dashboard"></i>Search</a>
-          </li>
+
+            <li class="">
+              <a href="<?php echo base_url('index.php/Admin_controller/Admin/manage_rto_database'); ?>"><i class="fa fa-hand-o-down"></i>FIR Request</a>
           <!---Menu---->
+
+          <li>
+            <a href="<?php echo base_url('index.php/Admin_controller/Admin/manage_rto_database'); ?>"><i class="fa fa-hand-o-up btn warning"></i>FIR Request</a>
+        <!---Menu---->
+          <script type="text/css">
+          .a
+          {
+            body-color:red;
+            background-color:red;
+          }
+          </script>
 
 
         </ul>
