@@ -76,7 +76,6 @@
     <?php include_once('admin_menu.php'); ?>
     <!-- /.navbar-collapse -->
   </nav>
-
   <div id="page-wrapper">
 
     <div class="container-fluid">
@@ -95,7 +94,7 @@
 
 
         <div class="col-xs-12">
-        <form class="form-inline">
+        <form class="form-inline" method="get" action="<?php echo base_url('index.php/Admin_controller/Admin/fir_data'); ?>">
           <div class="form-group">
             <label class="sr-only" for="exampleInputEmail3">Vehicle Issue Number</label>
 
@@ -107,16 +106,16 @@
 
           </div>
           <div class="form-group">
-            <label class="sr-only" for="exampleInputPassword3">Author Name</label>
-            <input type="text"  class="form-control" id="txt_author_name" name="txt_author_name" onkeyup="getauthordata();" placeholder="Author Name">
+
+
 						<div id="mydiv">
 
 						</div>
 
           </div>
           <div class="form-group">
-            <label class="sr-only" for="exampleInputPassword3">Publisher Name</label>
-            <input type="text" class="form-control" id="txt_publisher_name" name="txt_publisher_name" onkeyup="getpublisherdata();" placeholder="Publisher Name">
+
+
 						<div id="mydiv">
 
 						</div>
@@ -137,25 +136,27 @@
 		            <tr>
 		              <th>#</th>
 		              <th>Issue #</th>
-									<th>Name  </th>
+									<th>Vehicle Name  </th>
+									<th>User Name  </th>
 									<th>Model #</th>
 									<th>color</th>
 		              <th>Engine #</th>
 		              <th>Chasis #</th>
-		              <th>License #</th>
-		              <th>aadhar #</th>
-		              <th>DOI</th>
-		              <th>State</th>
-		              <th>City</th>
-		              <th></th>
+									<th>Missing Date</th>
+		              <th> FIR </th>
 
-		              <th>Delete</th>
-		              <th>Update</th>
+
+
 		            </tr>
 		          </thead>
 
 
 		     <?php
+
+	/*			 $this->db->join('tbl_user_side','tbl_user_side.user_id=tbl_book_master.author_id');
+         $this->db->join('tbl_publisher','tbl_publisher.publisher_id=tbl_book_master.publisher_id');
+         $this->db->join('tbl_category','tbl_category.cat_id=tbl_book_master.cat_id');
+   */
 				 $rto_view=$this->db->get('tbl_rto_database');
 		     $i=0;
 
@@ -177,17 +178,16 @@
 
 		           <td><?php echo $row_rto->rto_id; ?></td>
 		           <td><?php echo $row_rto->vehicle_issue_number; ?></td>
-		           <td><?php echo $row_rto->vehicle_engine_number; ?></td>
+		           <td><?php echo $row_rto->vehicle_name; ?></td>
 		           <td><?php echo $row_rto->vehicle_chasis_number; ?></td>
 		           <td><?php echo $row_rto->user_driving_license_number; ?></td>
 		           <td><?php echo $row_rto->user_aadhar_number; ?></td>
-		           <td><?php echo $row_rto->vehicle_lost_date; ?></td>
-		           <td><?php echo $row_rto->vehicle_lost_time; ?></td>
-		           <td><?php echo $row_rto->vehicle_lost_state; ?></td>
-		           <td><?php echo $row_rto->vehicle_lost_city; ?></td>
+		           <td><?php echo $row_rto->vehicle_chasis_number; ?></td>
+		           <td></td>
 
-		           <td><a href="<?php echo base_url('index.php/Admin_controller/Admin/manage_user_side/delete/').$row_rto->missing_vehicle_id; ?>"> <img class="img-circle" src="<?php echo base_url('img/icon/delete.png'); ?>" width="50px" height="50px"> </a> </td>
-		           <td><a href="<?php echo base_url('index.php/Admin_controller/Admin/manage_category/edit/').$row_rto->missing_vehicle_id; ?>"> <img class="img-circle" src="<?php echo base_url('img/icon/update.png'); ?>" width="50px" height="50px"></a> </td>
+		           <td></td>
+
+		           <td> <a> <button type="submit" name="FIR gerrate">FIR +</button></a> </td>
 		         </tr>
 
 

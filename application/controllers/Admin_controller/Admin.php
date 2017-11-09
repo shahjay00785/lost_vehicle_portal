@@ -114,6 +114,11 @@ public function manage_rto_database(){
 
 	}
 
+	public function fir_data(){
+
+		//redirect('Admin_controller/Admin/manage_rto_database');
+	}
+
 	public function manage_logout($parameter1=""){
 		if($parameter1=="logout"){
 			session_destroy();

@@ -11,7 +11,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href='//fonts.googleapis.com/css?family=Playball' rel='stylesheet' type='text/css'>   
+<link href='//fonts.googleapis.com/css?family=Playball' rel='stylesheet' type='text/css'>
 <!--slider-->
 <script src="js/jquery.min.js"></script>
 <script src="js/script.js" type="text/javascript"></script>
@@ -19,7 +19,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 </head>
 <body>
 <div class="header-bg">
-	<div class="wrap"> 
+	<div class="wrap">
 		<div class="h-bg">
 			<div class="total">
 				<div class="header">
@@ -33,7 +33,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<li><a href="#"><img src="images/icon2.png" alt=""/></a></li>
 							<li><a href="#"><img src="images/icon3.png" alt=""/></a></li>
 						</ul>
-					</div><div class="clear"></div> 
+					</div><div class="clear"></div>
 					<div class="header-bot">
 						<div class="logo">
 							<a href="index.html"><img src="images/logo.png" alt=""/></a>
@@ -42,11 +42,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						    <input type="text" class="textbox" value="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}">
 						    <button class="gray-button"><span>Search</span></button>
 				       </div>
-					<div class="clear"></div> 
-				</div>		
-		</div>	
-		<div class="menu"> 	
-			<div class="top-nav"> 
+					<div class="clear"></div>
+				</div>
+		</div>
+		<div class="menu">
+			<div class="top-nav">
 					<ul>
 						<li class="active"><a href="index.html">Home</a></li>
 						<li><a href="about.html">About</a></li>
@@ -54,9 +54,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<li><a href="new.html">New</a></li>
 						<li><a href="contact.html">Contact</a></li>
 					</ul>
-					<div class="clear"></div> 
+					<div class="clear"></div>
 				</div>
 		</div>
+
 		<div class="banner-top">
 			<div class="header-bottom">
 				 <div class="header_bottom_right_images">
@@ -70,31 +71,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						    <span class="arrow previous"></span>
 						    <span class="arrow next"></span>
 				  	</div>
-		  			<div class="content-wrapper">		  
+		  			<div class="content-wrapper">
 						<div class="content-top">
 							  	<div class="box_wrapper"><h1>New Products For July</h1>
 								</div>
-							 <div class="text"> 	
-								<div class="grid_1_of_3 images_1_of_3">
-									<div class="grid_1">
-										<a href="single.html"><img src="images/pic5.jpg" title="continue reading" alt=""></a>
-											<div class="grid_desc">
-												<p class="title">Lorem ipsum dolor sitconsectetuer adipiscing elit</p>
-												<p class="title1">Lorem ipsum dolor sitconsectetuer adipiscing elit</p>
-													 <div class="price" style="height: 19px;">
-													 	 <span class="reducedfrom">$66.00</span>
-								        				<span class="actual">$12.00</span>
-													</div>
-													<div class="cart-button">
-														<div class="cart">
-															<a href="#"><img src="images/cart.png" alt=""/></a>
-														</div>
-														<button class="button"><span>Details</span></button>
-													<div class="clear"></div>
-												</div>
-											</div>
+
+							 <div class="text">
+
+
 								</div><div class="clear"></div>
 							</div>
+
+
+
 									<div class="grid_1_of_3 images_1_of_3">
 										  <div class="grid_1">
 										<a href="single.html"><img src="images/pic6.jpg" title="continue reading" alt=""></a>
@@ -140,7 +129,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<div class="content-top">
 							  	<div class="box_wrapper"><h1>Featured Products</h1>
 								</div>
-							 <div class="text"> 	
+							 <div class="text">
 								<div class="grid_1_of_3 images_1_of_3">
 									<div class="grid_1">
 										<a href="single.html"><img src="images/pic1.jpg" title="continue reading" alt=""></a>
@@ -206,38 +195,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				</div>
 		</div>
 		<div class="header-para">
-				<div class="categories">
-						<div class="list-categories">
-							<div class="first-list">
-								<div class="div_2"><a href="#">Cars</a></div>
-								<div class="div_img">
-									<img src="images/car1.jpg" alt="Cars" title="Cars" width="60" height="39">
-								</div><div class="clear"></div>
-							</div>
-							<div class="first-list">
-								<div class="div_2"><a href="#">Rental</a></div>
-								<div class="div_img">
-									<img src="images/car2.jpg" alt="Cars" title="Cars" width="60" height="39">
-								</div><div class="clear"></div>
-							</div>
-							<div class="first-list">
-								<div class="div_2"><a href="#">Banking</a></div>
-								<div class="div_img">
-									<img src="images/car3.jpg" alt="Cars" title="Cars" width="60" height="39">
-								</div><div class="clear"></div>
-							</div>
-							<div class="first-list">
-								<div class="div_2"><a href="#">Trucks</a></div>
-								<div class="div_img">
-									<img src="images/car4.jpg" alt="Cars" title="Cars" width="60" height="39">
-								</div><div class="clear"></div>
-							</div>
-				</div>
-				<div class="box"> 
+
+				<div class="box">
 							<div class="box-heading"><h1><a href="#">Cart:&nbsp;</a></h1></div>
 							 <div class="box-content">
 							Now in your cart&nbsp;<strong> 0 items</strong>
-							</div>	
+							</div>
 				</div>
 				<div class="box-title">
 					<h1><span class="title-icon"></span><a href="#">Branches</a></h1>
@@ -273,7 +236,3 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 </div>
 </body>
 </html>
-
-    	
-    	
-            
