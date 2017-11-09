@@ -83,10 +83,17 @@
       <div class="col-lg-12">
         <h1 class="page-header">
           Fir request
+
         </h1>
         <ol class="breadcrumb">
           <li>
             <i class="fa fa-dashboard"></i>  <a href="">Dashboard</a>
+
+
+
+
+			
+
           </li>
 
         </ol>
@@ -94,11 +101,11 @@
 
 
         <div class="col-xs-12">
-        <form class="form-inline" method="get" action="<?php echo base_url('index.php/Admin_controller/Admin/fir_data'); ?>">
+        <form class="form-inline" method="post" action="<?php echo base_url('index.php/Admin_controller/Admin/fir_data/data'); ?>">
           <div class="form-group">
             <label class="sr-only" for="exampleInputEmail3">Vehicle Issue Number</label>
 
-            <input type="text" autocomplete="off" class="form-control" id="txt_vehicle_issue_number" name="txt_vehicle_issue_number" onkeyup="getdata();" placeholder="GJ05HD2017">
+            <input type="text" autocomplete="off" class="form-control" id="issue_number" name="issue_number" onkeyup="getdata();" placeholder="GJ05HD2017">
 
 						<div id="mydiv" style="display:block;position:absolute;background-color:black;color:white">
 

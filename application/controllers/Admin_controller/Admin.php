@@ -114,9 +114,25 @@ public function manage_rto_database(){
 
 	}
 
-	public function fir_data(){
+	public function fir_data($parameter1=""){
 
-		//redirect('Admin_controller/Admin/manage_rto_database');
+			if($parameter1=="data"){
+				$data=$this->input->post('issue_number');
+//$login_resultset=$this->db->query("select * from tbl_user where user_email='".$user_email."' and user_password='".$user_password."'  ");
+        $query=$this->db->query("select * from tbl_rto_database where vehicle_issue_number='".$data."'");
+				if($query->num_rows()>0){
+
+					echo "yes";
+					//redirect('Admin_controller/Admin/manage_rto_database',$data);
+				}
+				else{
+						echo "no";
+					//redirect('Admin_controller/Admin/manage_rto_database',$data);
+				}
+			}
+
+
+
 	}
 
 	public function manage_logout($parameter1=""){
