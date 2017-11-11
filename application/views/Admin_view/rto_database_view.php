@@ -92,7 +92,7 @@
 
 
 
-			
+
 
           </li>
 
@@ -135,8 +135,20 @@
 
 
 
+
+
 			<div class="col-lg-12">
-		      <h2>RTO database </a></h2>
+		      <h2>RTO database </a>
+
+					<?php if(isset($data)){
+						echo "yes";
+					}
+					else{
+						echo "no";
+					}
+
+					?>
+					</h2>
 		      <div class="table-responsive">
 		        <table class="table table-bordered table-hover table-striped">
 		          <thead>
@@ -194,7 +206,7 @@
 
 		           <td></td>
 
-		           <td> <a> <button type="submit" name="FIR gerrate">FIR +</button></a> </td>
+		           <td> <a href="<?php echo base_url('index.php/Admin_controller/Admin/fir_generate/').$row_rto->rto_id; ?>"> FIR +</a> </td>
 		         </tr>
 
 

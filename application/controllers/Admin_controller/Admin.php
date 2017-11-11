@@ -122,18 +122,35 @@ public function manage_rto_database(){
         $query=$this->db->query("select * from tbl_rto_database where vehicle_issue_number='".$data."'");
 				if($query->num_rows()>0){
 
-					echo "yes";
-					//redirect('Admin_controller/Admin/manage_rto_database',$data);
+				$data['msg']=$query->num_rows();
+				//redirect('Admin_controller/Admin/test',$a);
+				redirect('Admin_controller/Admin/manage_rto_database',$data);
 				}
 				else{
-						echo "no";
-					//redirect('Admin_controller/Admin/manage_rto_database',$data);
+				//$data2['msg2']="no";
+				//redirect('Admin_controller/Admin/manage_rto_database',$data2);
+			//		redirect('Admin_controller/Admin/manage_rto_database',$data2);
 				}
 			}
+    }
+
+
+		public function fir_generate($id){
 
 
 
-	}
+					$rto_data=$this->db->get_where('tbla_rto_database',array('rto_id'=>$id));
+
+					echo "<pre>";
+				  print_r($rto_data);
+echo "</pre>";
+
+
+
+
+	  }
+
+
 
 	public function manage_logout($parameter1=""){
 		if($parameter1=="logout"){
