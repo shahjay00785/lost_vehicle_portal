@@ -225,7 +225,9 @@ window.history.clear;
                             	<div class="title_block"> Login</div>
 								<p class="blox_para3">Login to check the status of your missing vehicle.<br>&nbsp;</p>
 
+																<form name="f1" action="<?php echo base_url('Admin_controller/Admin/user_login'); ?>" methoad="post">S
                                 <div class="form-login">
+
                                     <input name="ctl00$ContentPlaceHolder1$txt_username" type="text" id="ctl00_ContentPlaceHolder1_txt_username" class="form-control input-sm chat-input" placeholder="Username" />
                                     <br />
                                     <input name="ctl00$ContentPlaceHolder1$txt_password" type="password" id="ctl00_ContentPlaceHolder1_txt_password" class="form-control input-sm chat-input" placeholder="Password" />
@@ -234,7 +236,7 @@ window.history.clear;
                                     <div class="wrapper">
                                     	<span class="group-btn">
 
-                                                <input type="button" name="ctl00$ContentPlaceHolder1$btnLogin" value="Login ▸" onclick="javascript:__doPostBack('ctl00$ContentPlaceHolder1$btnLogin','')" id="ctl00_ContentPlaceHolder1_btnLogin" class="btn btn-primary btn-md btn_blue blox_btn" />
+                                                <input type="submit" name="ctl00$ContentPlaceHolder1$btnLogin" value="Login ▸" onclick="javascript:__doPostBack('ctl00$ContentPlaceHolder1$btnLogin','')" id="ctl00_ContentPlaceHolder1_btnLogin" class="btn btn-primary btn-md btn_blue blox_btn" />
                                                <br /><span id="ctl00_ContentPlaceHolder1_lbl_errormsg" style="color:Red;"></span>
                                         </span>
                                     </div>
