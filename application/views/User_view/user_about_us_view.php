@@ -133,13 +133,30 @@ li.dropdown {
 <body>
   <div>
 <ul>
-<li><a href="home.html">Home</a></li>
-  <li><a href="aboutUs.html">About us</a></li>
-  <li><a href="lostVehicle.html">Missing Vehicle</a></li>
-  <li><a href="found.html">Found Vehicle</a></li>
-  <li><a href="information.html">Information</a></li>
-<div class="lefNav">
-  <li><a href="login.html">Login</a></li>
+  <li><a href="<?php echo base_url('index.php/User_controller/User_home_controller/'); ?>">Home</a></li>
+    <li><a href="<?php echo base_url('index.php/User_controller/User_about_us_controller/'); ?>">About us</a></li>
+    <li><a href="<?php echo base_url('index.php/User_controller/User_missing_controller/'); ?>">Missing Vehicle</a></li>
+    <li><a href="<?php echo base_url('index.php/User_controller/User_found_controller/'); ?>">Found Vehicle</a></li>
+
+
+    <?php
+  					if(isset($_SESSION["useremail"])){
+              ?>
+              <div class="lefNav">
+                <li><a href="<?php echo base_url('index.php/User_controller/User_home_controller/manage_logout/logout'); ?>">Logout</a></li>
+            <?php
+  					}
+  					else{
+              ?>
+                <li><a href="information.html">Information</a>Login</li>
+            <?php
+  					}
+  					?>
+
+
+
+
+  </div>
 </div>
 </ul>
 <div>

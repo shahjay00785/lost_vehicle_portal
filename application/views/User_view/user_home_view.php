@@ -155,10 +155,11 @@ function myFunction() {
 <body>
   <div>
 <ul>
+
 <li><a href="<?php echo base_url('index.php/User_controller/User_home_controller/'); ?>">Home</a></li>
   <li><a href="<?php echo base_url('index.php/User_controller/User_about_us_controller/'); ?>">About us</a></li>
-  <li><a href="lostVehicle.html">Missing Vehicle</a></li>
-  <li><a href="found.html">Found Vehicle</a></li>
+  <li><a href="<?php echo base_url('index.php/User_controller/User_missing_controller/'); ?>">Missing Vehicle</a></li>
+  <li><a href="<?php echo base_url('index.php/User_controller/User_found_controller/'); ?>">Found Vehicle</a></li>
 
 
   <?php
