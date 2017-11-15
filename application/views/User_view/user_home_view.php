@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -125,21 +126,58 @@ li.dropdown {
   border-style: groove;
 }
 .green{
-  background-color: #62f442;
+  background-color: #1182a1;
   color: white;
 }
+.center{
+  margin-left: 4.5cm;
+}
+.button {
+    background-color: #1182a1;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
 </style>
+
+<script>
+function myFunction() {
+    alert("Registered Sucessfully");
+}
+</script>
 </head>
 <body>
   <div>
 <ul>
-<li><a href="home.html">Home</a></li>
-  <li><a href="aboutUs.html">About us</a></li>
+<li><a href="<?php echo base_url('index.php/User_controller/User_home_controller/'); ?>">Home</a></li>
+  <li><a href="<?php echo base_url('index.php/User_controller/User_about_us_controller/'); ?>">About us</a></li>
   <li><a href="lostVehicle.html">Missing Vehicle</a></li>
   <li><a href="found.html">Found Vehicle</a></li>
-  <li><a href="information.html">Information</a></li>
-<div class="lefNav">
-  <li><a href="login.html">Login</a></li>
+
+
+  <?php
+					if(isset($_SESSION["useremail"])){
+            ?>
+            <div class="lefNav">
+              <li><a href="<?php echo base_url('index.php/User_controller/User_home_controller/manage_logout/logout'); ?>">Logout</a></li>
+          <?php
+					}
+					else{
+            ?>
+              <li><a href="information.html">Information</a>Login</li>
+          <?php
+					}
+					?>
+
+
+
+
 </div>
 </ul>
 <div>
@@ -160,17 +198,17 @@ li.dropdown {
 
 <h2>Login</h2>
 
-<form action="<?php echo base_url('index.php/User_controller/User_home_controller/manage_user_login');?>"  method="post" style="border:1px solid #ccc">
+<form action="<?php echo base_url('index.php/User_controller/User_home_controller/manage_user_login/check');?>"  method="post"style="border:1px solid #ccc">
   <div class="container">
     <label><b>User Name</b></label>
+
     <input type="text" name="txt_user_name" required>
 
     <label><b>Password</b></label>
     <input type="password" name="txt_user_password" name="psw" required>
 
     <div class="clearfix">
-      <button type="button" class="cancelbtn">Cancel</button>
-      <button type="submit" class="signupbtn">Sign Up</button>
+      <div class="center"><button type="submit" class="button">Login</button></div>
     </div>
   </div>
 </form>
@@ -197,8 +235,7 @@ li.dropdown {
     <input type="password" id="txt_user_password" name="txt_user_password" placeholder="Enter Password"  required>
 
     <div class="clearfix">
-      <button type="button" class="cancelbtn">Cancel</button>
-      <button type="submit" class="signupbtn">Sign Up</button>
+      <div class="center"><button type="submit" onclick="myFunction()" class="button">Register</button></div>
     </div>
   </div>
 </form>
@@ -209,7 +246,7 @@ li.dropdown {
   <div class="column">
         <div class="green"><h4>Found Vehicle</h4></div>
       <div class="margueLeftleft">
-      <marquee direction = "up">
+      <marquee behavior="scroll" direction="up" onmouseover="this.stop();"onmouseout="this.start();">
         JH-12-5478 <br />
         JH-12-5478 <br />
         JH-12-5478 <br />
@@ -222,7 +259,7 @@ li.dropdown {
       <div class="groove">
         <div class="green"><h4>Missing Vehicle</h4></div>
         <div class="margueLeftleft">
-        <marquee direction = "up">
+        <marquee behavior="scroll" direction="up" onmouseover="this.stop();"onmouseout="this.start();">
           JH-12-5478 <br />
           JH-12-5478 <br />
           JH-12-5478 <br />
@@ -235,7 +272,7 @@ li.dropdown {
       <div class="groove">
         <div class="green"><h4>Track Vehicle</h4></div>
         <div class="margueLeftleft">
-        <marquee direction = "up">
+        <marquee behavior="scroll" direction="up" onmouseover="this.stop();"onmouseout="this.start();">
           JH-12-5478 <br />
           JH-12-5478 <br />
           JH-12-5478 <br />

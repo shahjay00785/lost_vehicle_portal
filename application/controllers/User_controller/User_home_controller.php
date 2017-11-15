@@ -17,14 +17,21 @@ class User_home_controller extends CI_Controller {
 		$user_email=$this->input->post('txt_user_name');
 		$user_password=$this->input->post('txt_user_password');
 
-		$login_resultset=$this->db->query("select * from tbl_user_side where user_email='".$user_email."' and user_password='".$user_password."'  ");
+		$login_resultset=$this->db->query("select * from tbl_user_side where user_name='".$user_email."' and user_password='".$user_password."'  ");
 		//print_r($row);
 		if($login_resultset->num_rows()>0){
-			//$_SESSION["useremail"]=$user_email;
-			redirect('user_controller/User_home_controller');
-		}
+			$_SESSION["useremail"]=$user_email;
+
+		/*  echo "<script type='text/javascript'>";
+			echo "alert('succcess full')";
+			echo "</script>";
+
+
+*/
+     redirect('User_controller/User_home_controller');
+		 }
 		else{
-			$login_data['msg']="Invalid username or Password";
+				echo "not login";
 
 		}
 
@@ -55,6 +62,15 @@ class User_home_controller extends CI_Controller {
  	   $page_data['user_view']=$this->db->get('tbl_user_side');
  	   //$this->load->view('Admi/user_side_view',$page_data);
  	 }
+
+
+	 public function manage_logout($parameter1=""){
+		 if($parameter1=="logout"){
+			 session_destroy();
+
+			 redirect(base_url().'index.php/User_controller/User_home_controller');
+		 }
+	 }
   }
 
 
