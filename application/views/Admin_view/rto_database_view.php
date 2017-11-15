@@ -140,14 +140,7 @@
 			<div class="col-lg-12">
 		      <h2>RTO database </a>
 
-					<?php if(isset($data)){
-						echo "yes";
-					}
-					else{
-						echo "no";
-					}
 
-					?>
 					</h2>
 		      <div class="table-responsive">
 		        <table class="table table-bordered table-hover table-striped">

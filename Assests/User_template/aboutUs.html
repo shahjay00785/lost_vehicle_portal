@@ -160,13 +160,13 @@ li.dropdown {
 
 <h2>Login</h2>
 
-<form action="<?php echo base_url('index.php/User_controller/User_home_controller/manage_user_login');?>"  method="post" style="border:1px solid #ccc">
+<form action="/action_page.php" style="border:1px solid #ccc">
   <div class="container">
     <label><b>User Name</b></label>
-    <input type="text" name="txt_user_name" required>
+    <input type="text" placeholder="Enter Email" name="email" required>
 
     <label><b>Password</b></label>
-    <input type="password" name="txt_user_password" name="psw" required>
+    <input type="password" placeholder="Enter Password" name="psw" required>
 
     <div class="clearfix">
       <button type="button" class="cancelbtn">Cancel</button>
@@ -179,22 +179,22 @@ li.dropdown {
   <div class="col-sm-4">
 <h2>Register</h2>
 
-<form action="<?php echo base_url('index.php/User_controller/User_home_controller/manage_user_side/add'); ?>" method="post" style="border:1px solid #ccc">
+<form action="/action_page.php" style="border:1px solid #ccc">
   <div class="container">
     <label><b>User Name</b></label>
-    <input type="text" id="txt_user_name" name="txt_user_name" placeholder="Enter User Name" name="email" required>
+    <input type="text" placeholder="Enter Email" name="email" required>
 
     <label><b>User Adhar Number</b></label>
-    <input type="text" id="txt_user_aadhar_number" name="txt_user_aadhar_number" placeholder="Enter User addhar number" required>
+    <input type="password" placeholder="Enter Password" name="psw" required>
 
     <label><b>User Driving Licence Number</b></label>
-    <input type="text" id="txt_user_driving_license_number" placeholder="Enter Drivin License" name="txt_user_driving_license_number" required>
+    <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
 
     <label><b>User Phone Number</b></label>
-    <input type="text" id="txt_user_phone_number"  name="txt_user_phone_number" required>
+    <input type="password" placeholder="Enter Password" name="psw" required>
 
     <label><b>User Password</b></label>
-    <input type="password" id="txt_user_password" name="txt_user_password" placeholder="Enter Password"  required>
+    <input type="password" placeholder="Enter Password" name="psw" required>
 
     <div class="clearfix">
       <button type="button" class="cancelbtn">Cancel</button>

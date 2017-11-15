@@ -40,7 +40,7 @@
   .img-circle {
     border-radius: 50%;
   }
-
+-
 
   </style>
   <script language="JavaScript" src="<?php echo base_url('Assests/Admin_template/js/gen_validatorv4.js'); ?>" >

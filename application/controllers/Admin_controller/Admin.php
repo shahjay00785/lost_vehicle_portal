@@ -166,18 +166,21 @@ public function manage_rto_database(){
 				$data=$this->input->post('issue_number');
 //$login_resultset=$this->db->query("select * from tbl_user where user_email='".$user_email."' and user_password='".$user_password."'  ");
         $query=$this->db->query("select * from tbl_rto_database where vehicle_issue_number='".$data."'");
-				if($query->num_rows()>0){
 
-				$data['msg']=$query->num_rows();
-				//redirect('Admin_controller/Admin/test',$a);
-				redirect('Admin_controller/Admin/manage_rto_database',$data);
-				}
-				else{
-				//$data2['msg2']="no";
-				//redirect('Admin_controller/Admin/manage_rto_database',$data2);
-			//		redirect('Admin_controller/Admin/manage_rto_database',$data2);
-				}
+				foreach ($query->result() as $data) {
+
+				$count=$data->vehicle_issue_number;
+				if($query->num_rows()>0){
+					echo "ok";
 			}
+
+			if($query->num_rows()<0){
+				echo "not ok";
+		}
+
+
+				}
+      }
     }
 
 
@@ -185,16 +188,29 @@ public function manage_rto_database(){
 
 
 
-					$rto_data=$this->db->get_where('tbla_rto_database',array('rto_id'=>$id));
+					$rto_data=$this->db->get_where('tbl_rto_database',array('rto_id'=>$id));
 
-					echo "<pre>";
-				  print_r($rto_data);
-echo "</pre>";
+				foreach ($rto_data->result() as $count_q) {
+							$data['rto_id']=$count_q->rto_id;
+							$data['fir_number']="abc123";
+							$data['fir_date']=date('Y-m-d H:i:s');
+							redirect('Admin_controller/Admin/fir_view');
+
+
+			}
+
+
+			 $this->db->insert('tbl_fir',$data);
+		 }
+
+		 public function fir_view(){
+			  $this->load->view('Admin_view/fir_view');
+		 }
 
 
 
 
-	  }
+
 
 
 

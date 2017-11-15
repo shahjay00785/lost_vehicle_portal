@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<style>
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    padding: 14px 20px;
+    background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn,.signupbtn {
+    float: left;
+    width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+    padding: 16px;
+}
+
+/* Clear floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+    .cancelbtn, .signupbtn {
+       width: 100%;
+    }
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+     padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.Margin {
+  margin-left: 2cm;
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.left{
+  margin-left: 10cm;
+  margin-right: 10cm;
+}
+.margin{
+  margin-left: 3cm;
+  margin-right: 4cm;
+  text-align: justify;
+ text-justify: inter-word;
+}
+.centre{
+  text-align: center;
+  color: green;
+ /*text-justify: inter-word;*/
+
+}
+</style>
+<body>
+  <div>
+<ul>
+  <li><a href="home.html">Home</a></li>
+  <li><a href="aboutUs.html">About us</a></li>
+  <li><a href="lostVehicle.html">Missing Vehicle</a></li>
+  <li><a href="found.html">Found Vehicle</a></li>
+  <li><a href="information.html">Information</a></li>
+<div class="leftNav">
+  <li><a href="login.html">Login</a></li>
+</div>
+</ul>
+<div>
+<br />
+<br />
+<div class="margin">
+
+      <div class="centre"><h2>About us:</h2></div>
+      <h3>This portal of police department provides services to the citizens to find the missing and stolen vehicles. The site will gather information of found vehicles, so that the vehicle owners, second-hand vehicle buyer and the insurance companies settling the claims of missing vehicles can browse the information and the vehicles can be returned to their owners.
+      </h3>
+      <div class="centre"><h2>Missing Vehicle</h2></div>
+      <h3>The data of a missing vehicle can be entered in the system by any person. He/She needs to mention the same while entering the data. The mandatory information would be the name of the owner, vehicle registration number, chassis number, vehicle make and model, date of purchase, insurance policy number and its provider, location from where the vehicle was lost, date and time of missing, his/her contact details like address, phone number, email and the FIR number etc. After filling up all necessary information, the person will get confirming the receipt of information and he/she can then go and search the found vehicles database for his/her vehicle. If the vehicle data exists in the found database, the person will receive a call from us informing him/her to contact the administration department in the company’s registered office to collect the further details regarding his/her vehicle. The person needs to provide original papers of the vehicle, his/her photo identity proof  The vehicle details will be given only on producing these documents and after matching the information.
+      </h3>
+      <div class="centre"><h2>Found Vehicle</h2></div>
+      <h3>A person locates a vehicle lying idle in front of the office or a residence or a parking lot and wishes to report its details to the owner of the vehicle. He can do so through our portal. In this case, he/she need not provide his/her personal details, however, he/she needs to enter the details of the found vehicle such as the registration number, vehicle company and model and location where it was found. Although the personal information is not mandatory, it can be filled in if the user wants to check the progress of the search of that vehicle owner. If he/she has entered his/her email address, he/she will receive a call from the police department after filling up the information. He / She will get a call for updating him/her about the progress of the search of the vehicle owner. He / She needs to provide his/her photo id proof for the same.
+      </h3>
+      </div>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+</html>
