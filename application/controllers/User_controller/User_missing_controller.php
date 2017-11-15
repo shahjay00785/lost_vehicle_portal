@@ -14,7 +14,7 @@ class User_missing_controller extends CI_Controller {
 	public function manage_missing_vehicle($parameter1="",$parameter2=""){
 	 if(!isset($_SESSION["useremail"]))
 	 {
-		 redirect(base_url().'User_controller/User_missing_controller');
+		 echo "not Login";
 	 }
 	 else{
 		 if($parameter1=="add"){
@@ -28,7 +28,7 @@ class User_missing_controller extends CI_Controller {
 		 $data['vehicle_lost_city']=$this->input->post('txt_lost_city_name');
 		 $data['vehicle_lost_time']=$this->input->post('txt_vehicle_lost_time');
 		 $this->db->insert('tbl_missing_vehicle',$data);
-		 //redirect('Admin_controller/Admin/manage_missing_vehicle');
+		 
 
 	 }
 

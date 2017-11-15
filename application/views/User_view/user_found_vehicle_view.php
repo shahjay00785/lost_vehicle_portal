@@ -154,29 +154,25 @@ li.dropdown {
 <br />
 <br />
   <div class="left">
-<form action="/action_page.php">
+<form action="<?php echo base_url('index.php/User_controller/User_found_controller/manage_found_vehicle/add'); ?>" enctype="multipart/form-data" method="post">
   <fieldset>
-    <legend>Missing Vehicle</legend>
+    <legend>Found Vehicle</legend>
     Vehicle Issue Number:<br>
-    <input type="text" name="firstname" value="">
+        <input type="text" id="txt_vehicle_issue_number" name="txt_vehicle_issue_number" class="form-control">
     <br>
-    Vehicle Photo:
+    Vehicle image:
+  </br>
+          <input type="file" id="txt_vehicle_img" name="txt_vehicle_img" class="form-control">
+        </br>
+    Vehicle Date:
+      <input type="text" id="txt_vehicle_found_date" name="txt_vehicle_found_date" class="form-control">
     <br>
+    Vehicle place
+      <input type="text" id="txt_vehicle_found_place" name="txt_vehicle_found_place" class="form-control">
     <br>
-    <form action="/action_page.php">
-  <input type="file" name="pic" accept="image/*">
-</form>
-  <br>
-    <br>
-    Vehicle Found Place:<br>
-    <input type="text" name="firstname" value="">
-    <br>
-    Vehicle Found Date:<br>
-    <input type="text" name="lastname" value="">
-    <br>
+
     <input type="submit" value="Submit">
-  </fieldset>
-</form>
+
 </div>
 </body>
 <script>

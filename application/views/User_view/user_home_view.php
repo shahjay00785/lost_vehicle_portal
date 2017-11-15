@@ -248,10 +248,19 @@ function myFunction() {
         <div class="green"><h4>Found Vehicle</h4></div>
       <div class="margueLeftleft">
       <marquee behavior="scroll" direction="up" onmouseover="this.stop();"onmouseout="this.start();">
-        JH-12-5478 <br />
-        JH-12-5478 <br />
-        JH-12-5478 <br />
-        JH-12-5478 <br />
+
+
+        <?php
+        $page_data=$this->db->get('tbl_found_vehicle');
+
+        foreach ($page_data->result() as $data) {
+          echo $data->vehicle_issue_number;
+          echo "</br>";
+        }
+
+        ?>
+
+
       </marquee>
     </div>
     </div>
@@ -261,12 +270,16 @@ function myFunction() {
         <div class="green"><h4>Missing Vehicle</h4></div>
         <div class="margueLeftleft">
         <marquee behavior="scroll" direction="up" onmouseover="this.stop();"onmouseout="this.start();">
-          JH-12-5478 <br />
-          JH-12-5478 <br />
-          JH-12-5478 <br />
-          JH-12-5478 <br />
-          JH-12-5478 <br />
-        </marquee>
+          <?php
+          $page_data=$this->db->get('tbl_missing_vehicle');
+
+            foreach ($page_data->result() as $data) {
+                echo $data->vehicle_issue_number;
+              echo "</br>";
+            }
+
+           ?>
+          </marquee>
       </div>
     </div>
       <br />

@@ -155,50 +155,44 @@ li.dropdown {
 <br />
 
   <div class="left">
-<form action="/action_page.php">
+<form action="<?php echo base_url('index.php/User_controller/User_missing_controller/manage_missing_vehicle/add'); ?>" method="post">
   <fieldset>
-    <legend>Found Vehicle</legend>
+    <legend>Missing Vehicle Details</legend>
     Vehicle Issue Number:<br>
-    <input type="text" name="firstname" value="">
+      <input type="text" id="txt_vehicle_issue_number" name="txt_vehicle_issue_number" class="form-control">
     <br>
     Vehicle Engine Number:<br>
-    <input type="text" name="lastname" value="">
+    <input type="text" id="txt_vehicle_engine_number" name="txt_vehicle_engine_number" class="form-control">
     <br>
-    User Deriving Licence Number:<br>
-    <input type="text" name="firstname" value="">
+    Vehicle Chasis Number:
+      <input type="text" id="txt_vehicle_chasis_number" name="txt_vehicle_chasis_number" class="form-control">
+
     <br>
-    User Adhar Number:<br>
-    <input type="text" name="lastname" value="">
+    User Driving License Number:<br>
+    <input type="text" id="txt_user_driving_license_number" name="txt_user_driving_license_number" class="form-control">
     <br>
-    Vehicle Lost Date:<br>
-    <input type="text" name="firstname" value="">
-    <br>
+    User Aadhar Number:<br>
+    <input type="text" id="txt_user_aadhar_number" name="txt_user_aadhar_number" class="form-control">
+
     Vehicle Lost State:<br>
-    <form action="/action_page.php">
-      <input list="browsers" name="browser">
-      <datalist id="browsers">
-        <option value="1">
-        <option value="2">
-        <option value="3">
-        <option value="4">
-        <option value="5">
-      </datalist>
-    </form>
+    <select class="form-group" id="txt_lost_city_name" name="txt_lost_state_name">
+        <option value="Gujarat">Gujarat</option>
+    </select>
+
     <br>
     Vehicle Lost City:<br>
-    <form action="/action_page.php">
-      <input list="browsers" name="browser">
-      <datalist id="browsers">
-        <option value="1">
-        <option value="2">
-        <option value="3">
-        <option value="4">
-        <option value="5">
-      </datalist>
-    </form>
+    <select class="form-group" id="txt_lost_city_name" name="txt_lost_city_name">
+        <option value="Gandhinagar">Gandinagr</option>
+    </select>
+
     <br>
+
+    Vehicle Lost Date
+    <input type="text" id="txt_vehicle_lost_date" name="txt_vehicle_lost_date" class="form-control">
+    <br>
+
     Vehicle Lost Time:<br>
-    <input type="text" name="lastname" value="Vehicle Lost Time">
+    <input type="text" id="txt_vehicle_lost_time" name="txt_vehicle_lost_time" class="form-control">
     <br>
     <input type="submit" value="Submit">
   </fieldset>
