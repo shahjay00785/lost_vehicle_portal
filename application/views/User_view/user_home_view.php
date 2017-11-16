@@ -110,7 +110,7 @@ li.dropdown {
     display: block;
 }
 .margueLeft{
-   margin-left: 0.5cm;
+   margin-left: 3cm;
 }
 .margueLeftleft{
   margin-left: 1cm;
@@ -130,7 +130,10 @@ li.dropdown {
   color: white;
 }
 .center{
-  margin-left: 4.5cm;
+  margin-left: 3.5cm;
+}
+.center1{
+  margin-left: 15cm;
 }
 .button {
     background-color: #1182a1;
@@ -143,6 +146,13 @@ li.dropdown {
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
+}
+.loginLeft{
+  margin-left: 2cm;
+}
+.footer{
+  background-color:  black;
+  color: white;
 }
 </style>
 
@@ -186,18 +196,18 @@ function myFunction() {
 <br />
 <center>
   <div class="w3-content w3-section" style="max-width:100px max-height:20px">
-    <img class="mySlides" src="1.jpg" style="width:80%">
-    <img class="mySlides" src="4.jpg" style="width:80%">
-    <img class="mySlides" src="5.jpg" style="width:80%">
+    <img class="mySlides" src="<?php echo base_url('Assests/User_template/1.jpg'); ?>" style="width:80%">
+    <img class="mySlides" src="<?php echo base_url('Assests/User_template/4.jpg'); ?>" style="width:80%">
+    <img class="mySlides" src="<?php echo base_url('Assests/User_template/5.jpg'); ?>" style="width:80%">
   </div>
 </center>
 <br />
 <div class="left">
 <div class="row">
   <div class="col-sm-4">
+<div class="loginLeft">
 
-
-<h2>Login</h2>
+<div class="center"><h2>Login</h2></div>
 
 <form action="<?php echo base_url('index.php/User_controller/User_home_controller/manage_user_login/check');?>"  method="post"style="border:1px solid #ccc">
   <div class="container">
@@ -209,14 +219,15 @@ function myFunction() {
     <input type="password" name="txt_user_password" name="psw" required>
 
     <div class="clearfix">
-      <div class="center"><button type="submit" class="button">Login</button></div>
+      <div class=""><button type="submit" class="button">Login</button></div>
     </div>
   </div>
 </form>
 
   </div>
+</div>
   <div class="col-sm-4">
-<h2>Register</h2>
+<div class="center"><h2>Register</h2></div>
 
 <form action="<?php echo base_url('index.php/User_controller/User_home_controller/manage_user_side/add'); ?>" method="post" style="border:1px solid #ccc">
   <div class="container">
@@ -236,35 +247,29 @@ function myFunction() {
     <input type="password" id="txt_user_password" name="txt_user_password" placeholder="Enter Password"  required>
 
     <div class="clearfix">
-      <div class="center"><button type="submit" onclick="myFunction()" class="button">Register</button></div>
+      <div class=""><button type="submit" onclick="myFunction()" class="button">Register</button></div>
     </div>
   </div>
 </form>
   </div>
   <div class="margueLeft">
   <div class="Margin">
-    <div class="groove">
-  <div class="column">
-        <div class="green"><h4>Found Vehicle</h4></div>
+    <!-- <div class="groove">
+      <div class="green"><h4>Track Vehicle</h4></div>
       <div class="margueLeftleft">
       <marquee behavior="scroll" direction="up" onmouseover="this.stop();"onmouseout="this.start();">
-
-
         <?php
-        $page_data=$this->db->get('tbl_found_vehicle');
+        $page_data=$this->db->get('tbl_missing_vehicle');
 
-        foreach ($page_data->result() as $data) {
-          echo $data->vehicle_issue_number;
-          echo "</br>";
-        }
+          foreach ($page_data->result() as $data) {
+              echo $data->vehicle_issue_number;
+            echo "</br>";
+          }
 
-        ?>
-
-
-      </marquee>
+         ?>
+        </marquee>
     </div>
-    </div>
-      </div>
+  </div> -->
       <br />
       <div class="groove">
         <div class="green"><h4>Missing Vehicle</h4></div>
@@ -284,24 +289,21 @@ function myFunction() {
     </div>
       <br />
       <div class="groove">
-        <div class="green"><h4>Track Vehicle</h4></div>
+        <div class="green"><h4>Found Vehicle</h4></div>
         <div class="margueLeftleft">
         <marquee behavior="scroll" direction="up" onmouseover="this.stop();"onmouseout="this.start();">
-          JH-12-5478 <br />
-          JH-12-5478 <br />
-          JH-12-5478 <br />
-          JH-12-5478 <br />
-          JH-12-5478 <br />
-          JH-12-5478 <br />
-          JH-12-5478 <br />
-          JH-12-5478 <br />
-          JH-12-5478 <br />
-          JH-12-5478 <br />
-          JH-12-5478 <br />
-          JH-12-5478 <br />
-        </marquee>
+          <?php
+          $page_data=$this->db->get('tbl_missing_vehicle');
+
+            foreach ($page_data->result() as $data) {
+                echo $data->vehicle_issue_number;
+              echo "</br>";
+            }
+
+           ?>
+          </marquee>
       </div>
-      </div>
+    </div>
     </div>
   </div>
         </div>
@@ -335,5 +337,9 @@ function myFunction() {
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 </div>
 </div>
+<footer class="footer">
+  <div class="center1"><p>@20017 copy right</a>.</p></div>
+
+</footer>
 </body>
 </html>

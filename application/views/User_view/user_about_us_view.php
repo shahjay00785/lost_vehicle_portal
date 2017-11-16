@@ -128,9 +128,28 @@ li.dropdown {
   background-color: #62f442;
   color: white;
 }
+.footer{
+  background-color:  black;
+  color: white;
+}
+
+.center1{
+  margin-left: 15cm;
+}
+.about{
+    margin-left:4cm;
+      margin-right:4cm;
+      text-align: justify;
+  text-justify: inter-word;
+  }
+  .color{
+    color: blue;
+  }
+}
 </style>
 </head>
 <body>
+
   <div>
 <ul>
   <li><a href="<?php echo base_url('index.php/User_controller/User_home_controller/'); ?>">Home</a></li>
@@ -152,23 +171,19 @@ li.dropdown {
             <?php
   					}
   					?>
-
-
-
-
   </div>
 </div>
 </ul>
 <div>
-<br />
-<br />
-<center>
-  <div class="w3-content w3-section" style="max-width:100px max-height:20px">
-    <img class="mySlides" src="1.jpg" style="width:80%">
-    <img class="mySlides" src="4.jpg" style="width:80%">
-    <img class="mySlides" src="5.jpg" style="width:80%">
-  </div>
-</center>
+  <br>
+  <br>
+  <center>
+    <div class="w3-content w3-section" style="max-width:100px max-height:20px">
+      <img class="mySlides" src="<?php echo base_url('Assests/User_template/1.jpg'); ?>" style="width:80%">
+      <img class="mySlides" src="<?php echo base_url('Assests/User_template/4.jpg'); ?>" style="width:80%">
+      <img class="mySlides" src="<?php echo base_url('Assests/User_template/5.jpg'); ?>" style="width:80%">
+    </div>
+  </center>
 <br />
   </div>
   </div>
@@ -199,5 +214,20 @@ li.dropdown {
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 </div>
 </div>
+<div class="about">
+<h5>
+<h2>  <center class="color">About Us</center><br> </h2>
+  This portal is meant for tracing and providing a platform to find the missing and stolen vehicles. The site will gather information of found vehicles, so that the vehicle owners, Police department and the insurance companies settling the claims of missing vehicles can browse the information and the vehicles can be returned to their owners.
+  <h2><br><br><center class="color">Missing Vehicle</center><br></h2>
+  The data of a missing vehicle can be entered in the system by any person. He/She needs to mention the same while entering the data. The mandatory information would be the name of the owner, vehicle registration number, chassis number, vehicle make and model, date of purchase, insurance policy number and its provider, location from where the vehicle was lost, date and time of missing, his/her contact details like address, phone number, email and the FIR number etc. After filling up all necessary information, the person will receive an email confirming the receipt of information and he/she can then go and search the found vehicles database for his/her vehicle. If the vehicle data exists in the found database, the person will receive a message informing him/her to contact the administration department in the company’s registered office to collect the further details regarding his/her vehicle. The person needs to provide original papers of the vehicle, his/her photo identity proof and the copy of FIR lodged in the nearest police station while contacting the administration department. The vehicle details will be given only on producing these documents and after matching the information.
+  <h2><br><br><center class="color">Found Vehicle</center><br></h2>
+  A person locates a vehicle lying idle in front of the office or a residence or a parking lot and wishes to report its details to the owner of the vehicle. He can do so through this web-site. In this case, he/she need not provide his/her personal details, however, he/she needs to enter the details of the found vehicle such as the registration number, vehicle make and model and location where it was found. Although the personal information is not mandatory, it can be filled in if the user wants to check the progress of search of that vehicle owner. If he/she has entered his/her email address, he/she will receive an acknowledgement mail after filling up the information. He / She will receive auto generated emails from the company updating him/her about the progress of the search of the vehicle owner. If the company decides to offer some complementary gift to the person reporting a found vehicle in future, the person will have to enter his personal details and he/she will have to contact the administration department for their gift. He / She needs to provide his/her photo id proof for the same.
+<br><br><br><br>
+</h5>
+</div>
+<footer class="footer">
+  <div class="center1"><p>@20017 copy right</a>.</p></div>
+
+</footer>
 </body>
 </html>

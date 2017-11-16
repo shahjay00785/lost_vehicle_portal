@@ -109,6 +109,14 @@ li.dropdown {
   margin-left: 10cm;
   margin-right: 10cm;
 }
+.footer{
+  background-color:  black;
+  color: white;
+}
+
+.center1{
+  margin-left: 15cm;
+}
 </style>
 <body>
   <div>
@@ -174,7 +182,13 @@ li.dropdown {
     <input type="submit" value="Submit">
 
 </div>
+<br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
+<footer class="footer">
+  <div class="center1"><p>@20017 copy right</a>.</p></div>
+
+</footer>
 <script>
 var myIndex = 0;
 carousel();

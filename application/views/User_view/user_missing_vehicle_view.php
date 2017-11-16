@@ -109,6 +109,14 @@ li.dropdown {
   margin-left: 10cm;
   margin-right: 10cm;
 }
+.footer{
+  background-color:  black;
+  color: white;
+}
+
+.center1{
+  margin-left: 15cm;
+}
 </style>
 <body>
   <div>
@@ -198,6 +206,9 @@ li.dropdown {
   </fieldset>
 </form>
 </div>
+<footer class="footer">
+  <div class="center1"><p>@20017 copy right</a>.</p></div>
+</footer>
 </body>
 <script>
 var myIndex = 0;
