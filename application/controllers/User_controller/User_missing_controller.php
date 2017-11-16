@@ -1,5 +1,5 @@
 <?php
-session_start();
+//session_start(); autoload library
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class User_missing_controller extends CI_Controller {
@@ -14,7 +14,8 @@ class User_missing_controller extends CI_Controller {
 	public function manage_missing_vehicle($parameter1="",$parameter2=""){
 	 if(!isset($_SESSION["useremail"]))
 	 {
-		 echo "not Login";
+		  $this->session->set_flashdata('message','please login first');
+			redirect('User_controller/User_missing_controller');
 	 }
 	 else{
 		 if($parameter1=="add"){
@@ -28,7 +29,7 @@ class User_missing_controller extends CI_Controller {
 		 $data['vehicle_lost_city']=$this->input->post('txt_lost_city_name');
 		 $data['vehicle_lost_time']=$this->input->post('txt_vehicle_lost_time');
 		 $this->db->insert('tbl_missing_vehicle',$data);
-		 
+
 
 	 }
 

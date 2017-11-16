@@ -157,13 +157,11 @@ li.dropdown {
 </style>
 
 <script>
-function myFunction() {
-    alert("Registered Sucessfully");
 }
 </script>
 </head>
 <body>
-  <div>
+  <div style="width:80%;margin:auto;">
 <ul>
 
 <li><a href="<?php echo base_url('index.php/User_controller/User_home_controller/'); ?>">Home</a></li>
@@ -193,6 +191,7 @@ function myFunction() {
 </ul>
 <div>
 <br />
+<h2 align="center" style="color:green;"> <?php echo $this->session->flashdata('message'); ?> </h2>
 <br />
 <center>
   <div class="w3-content w3-section" style="max-width:100px max-height:20px">
@@ -208,6 +207,8 @@ function myFunction() {
 <div class="loginLeft">
 
 <div class="center"><h2>Login</h2></div>
+
+
 
 <form action="<?php echo base_url('index.php/User_controller/User_home_controller/manage_user_login/check');?>"  method="post"style="border:1px solid #ccc">
   <div class="container">
@@ -247,7 +248,7 @@ function myFunction() {
     <input type="password" id="txt_user_password" name="txt_user_password" placeholder="Enter Password"  required>
 
     <div class="clearfix">
-      <div class=""><button type="submit" onclick="myFunction()" class="button">Register</button></div>
+      <div class=""><button type="submit"  class="button">Register</button></div>
     </div>
   </div>
 </form>
@@ -337,7 +338,8 @@ function myFunction() {
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 </div>
 </div>
-<footer class="footer">
+<footer class="footer"
+ style="width:80%;margin:auto;">
   <div class="center1"><p>@20017 copy right</a>.</p></div>
 
 </footer>

@@ -1,5 +1,5 @@
 <?php
-session_start();
+//session_start();
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class User_home_controller extends CI_Controller {
@@ -22,12 +22,13 @@ class User_home_controller extends CI_Controller {
 		if($login_resultset->num_rows()>0){
 			$_SESSION["useremail"]=$user_email;
 
-		/*  echo "<script type='text/javascript'>";
+		 /* echo "<script type='text/javascript'>";
 			echo "alert('succcess full')";
 			echo "</script>";
+			*/
+			$this->session->set_flashdata('message','login Sucessfully');
 
 
-*/
      redirect('User_controller/User_home_controller');
 		 }
 		else{
@@ -47,6 +48,7 @@ class User_home_controller extends CI_Controller {
  		 $data['user_phone_number']=$this->input->post('txt_user_phone_number');
  		 $data['user_password']=$this->input->post('txt_user_password');
  		 $this->db->insert('tbl_user_side',$data);
+		 $this->session->set_flashdata('message','Register Sucessfull');
  		 redirect('User_controller/User_home_controller');
 
  	 }

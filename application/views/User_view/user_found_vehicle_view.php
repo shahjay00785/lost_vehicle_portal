@@ -119,7 +119,7 @@ li.dropdown {
 }
 </style>
 <body>
-  <div>
+  <div style="width:80%;margin:auto;">
 <ul>
 
   <li><a href="<?php echo base_url('index.php/User_controller/User_home_controller/'); ?>">Home</a></li>
@@ -185,7 +185,7 @@ li.dropdown {
 <br>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
-<footer class="footer">
+<footer class="footer" style="width:80%;margin:auto;">
   <div class="center1"><p>@20017 copy right</a>.</p></div>
 
 </footer>
