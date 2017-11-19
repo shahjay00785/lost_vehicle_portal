@@ -140,56 +140,33 @@ li.dropdown {
     <thead class="thead-dark">
       <tr>
         <th>#</th>
-        <th>Column heading</th>
-        <th>Column heading</th>
-        <th>Column heading</th>
+        <th>Fir NUmber</th>
+        <th>Fir Date</th>
+        <th>Fir Status</th>
       </tr>
     </thead>
+
+    <?php
+    $fir_view=$this->db->get('tbl_fir');
+    foreach ($fir_view->result() as $row_fir)
+    {
+     ?>
+
+
+
     <tbody>
       <tr>
-        <td>1</td>
-        <td>Column content</td>
-        <td>Column content</td>
-        <td>Column content</td>
+        <td><?php echo $row_fir->fir_id; ?></td>
+        <td><?php echo $row_fir->fir_number; ?></td>
+        <td><?php echo $row_fir->fir_date; ?></td>
+        <td>pending</td>
       </tr>
-      <tr>
-        <td>2</td>
-        <td>Column content</td>
-        <td>Column content</td>
-        <td>Column content</td>
-      </tr>
-      <tr class="table-info">
-        <td>3</td>
-        <td>Column content</td>
-        <td>Column content</td>
-        <td>Column content</td>
-      </tr>
-      <tr class="table-success">
-        <td>4</td>
-        <td>Column content</td>
-        <td>Column content</td>
-        <td>Column content</td>
-      </tr>
-      <tr class="table-danger">
-        <td>5</td>
-        <td>Column content</td>
-        <td>Column content</td>
-        <td>Column content</td>
-      </tr>
-      <tr class="table-warning">
-        <td>6</td>
-        <td>Column content</td>
-        <td>Column content</td>
-        <td>Column content</td>
-      </tr>
-      <tr class="table-active">
-        <td>7</td>
-        <td>Column content</td>
-        <td>Column content</td>
-        <td>Column content</td>
-      </tr>
-    </tbody>
-  </table>
+
+   </tbody>
+   <?php
+ }
+    ?>
+      </table>
 </div>
 <footer class="footer" style="width:80%;margin:auto;">
   <div class="center1"><p>@20017 copy right</a>.</p></div>

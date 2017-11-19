@@ -37,7 +37,7 @@
 
 				req.onreadystatechange = function() {
 					if (req.readyState == 4) {
-						// only if "OK"
+						// only if "OK
 						if (req.status == 200) {
 							document.getElementById('mydiv').innerHTML=req.responseText;
 

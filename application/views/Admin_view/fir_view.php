@@ -76,12 +76,7 @@
 		              <th> Fir Number</th>
 									<th> Fir Date  </th>
 									<th>User Name  </th>
-									<th>Model #</th>
-									<th>color</th>
-		              <th>Engine #</th>
-		              <th>Chasis #</th>
-									<th>Missing Date</th>
-		              <th> </th>
+						      <th> Vehicle Issue Number </th>
 
 
 
@@ -98,10 +93,13 @@
 
 
 
-				 $fir_view=$this->db->get('tbl_fir');
+				 $fir_view=$this->db->query("SELECT
+DISTINCT fir.fir_id,fir.fir_number,fir.fir_date,rto.vehicle_issue_number,user.user_aadhar_number,rto.vehicle_issue_number,user.user_name from
+tbl_fir fir, tbl_rto_database rto,tbl_user_side user
+where rto.rto_id=fir.fir_id AND  user.user_aadhar_number=rto.user_aadhar_number;");
 		     $i=0;
 
-		     foreach ($fir_view->result() as $row_fir)
+		     foreach ($fir_view->result_array()  as $row_fir)
 		     {
 
 
@@ -117,18 +115,16 @@
 		           ?>
 
 
-		           <td><?php echo $row_fir->rto_id; ?></td>
-		           <td><?php echo $row_fir->fir_number; ?></td>
-		           <td><?php echo $row_fir->fir_date; ?></td>
-		           <td><?php echo $row_fir->vehicle_chasis_number; ?></td>
-		           <td><?php echo $row_fir->user_driving_license_number; ?></td>
-		           <td><?php echo $row_fir->user_aadhar_number; ?></td>
-		           <td><?php echo $row_fir->vehicle_chasis_number; ?></td>
-		           <td></td>
+		           <td><?php echo $row_fir['fir_id']; ?></td>
+		           <td><?php echo $row_fir['fir_number']; ?></td>
+		           <td><?php echo $row_fir['fir_date']; ?></td>
+               <td><?php echo $row_fir['user_name']; ?></td>
+               <td><?php echo $row_fir['vehicle_issue_number']; ?></td>
+
 
 		           <td></td>
 
-		           <td> <a href="<?php echo base_url('index.php/Admin_controller/Admin/fir_generate/').$row_fir->rto_id; ?>"> FIR +</a> </td>
+
 		         </tr>
 
 
