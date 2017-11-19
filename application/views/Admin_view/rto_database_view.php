@@ -12,7 +12,7 @@
 				try{
 				xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
 				}
-				catch(e){
+				catch(e){-
 					xmlhttp=false;
 				}
 			}
@@ -108,7 +108,7 @@
             <input type="text" autocomplete="off" class="form-control" id="issue_number" name="issue_number" onkeyup="getdata();" placeholder="GJ05HD2017">
 
 						<div id="mydiv" style="display:block;position:absolute;background-color:black;color:white">
-
+						 <?php echo $this->session->flashdata('message'); ?>
 						</div>
 
           </div>
@@ -130,6 +130,7 @@
           </div>
 
           <button type="submit" class="btn btn-default">Search Data</button>
+					<h2 align="center" style="color:green;"><?php echo $this->session->flashdata('message'); ?></h2>
         </form>
       </div>
 

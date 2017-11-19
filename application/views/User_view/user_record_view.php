@@ -68,7 +68,7 @@ li a, .dropbtn {
     display: inline-block;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+     padding: 14px 16px;
     text-decoration: none;
 }
 
@@ -132,35 +132,69 @@ li.dropdown {
   </div>
 </center>
 <br />
+<h2 align="center" style="color:green;"> <?php echo $this->session->flashdata('message'); ?> </h2>
 <br />
+
   <div class="left">
-<form action="<?php echo base_url('index.php/User_controller/User_found_controller/manage_found_vehicle/add'); ?>" enctype="multipart/form-data" method="post">
-  <fieldset>
-    <legend>Found Vehicle</legend>
-    Vehicle Issue Number:<br>
-        <input type="text" id="txt_vehicle_issue_number" name="txt_vehicle_issue_number" class="form-control">
-    <br>
-    Vehicle image:
-  </br>
-          <input type="file" id="txt_vehicle_img" name="txt_vehicle_img" class="form-control">
-        </br>
-    Vehicle Date:
-      <input type="text" id="txt_vehicle_found_date" name="txt_vehicle_found_date" class="form-control">
-    <br>
-    Vehicle place
-      <input type="text" id="txt_vehicle_found_place" name="txt_vehicle_found_place" class="form-control">
-    <br>
-
-    <input type="submit" value="Submit">
-
+    <table class="table table-striped table-hover table-bordered">
+    <thead class="thead-dark">
+      <tr>
+        <th>#</th>
+        <th>Column heading</th>
+        <th>Column heading</th>
+        <th>Column heading</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Column content</td>
+        <td>Column content</td>
+        <td>Column content</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Column content</td>
+        <td>Column content</td>
+        <td>Column content</td>
+      </tr>
+      <tr class="table-info">
+        <td>3</td>
+        <td>Column content</td>
+        <td>Column content</td>
+        <td>Column content</td>
+      </tr>
+      <tr class="table-success">
+        <td>4</td>
+        <td>Column content</td>
+        <td>Column content</td>
+        <td>Column content</td>
+      </tr>
+      <tr class="table-danger">
+        <td>5</td>
+        <td>Column content</td>
+        <td>Column content</td>
+        <td>Column content</td>
+      </tr>
+      <tr class="table-warning">
+        <td>6</td>
+        <td>Column content</td>
+        <td>Column content</td>
+        <td>Column content</td>
+      </tr>
+      <tr class="table-active">
+        <td>7</td>
+        <td>Column content</td>
+        <td>Column content</td>
+        <td>Column content</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
-<br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-</body>
 <footer class="footer" style="width:80%;margin:auto;">
   <div class="center1"><p>@20017 copy right</a>.</p></div>
-
 </footer>
+</body>
 <script>
 var myIndex = 0;
 carousel();
@@ -180,5 +214,5 @@ function carousel() {
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-
+  <link href="<?php echo base_url('Assests/Admin_template/css/bootstrap.min.css')?>" rel="stylesheet">
 </html>

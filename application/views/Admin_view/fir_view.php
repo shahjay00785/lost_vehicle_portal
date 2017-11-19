@@ -97,10 +97,7 @@
    */
 
 
-$this->db->join('tbl_rto','tbl_author.author_id=tbl_book_master.author_id');
-$this->db->join('tbl_publisher','tbl_publisher.publisher_id=tbl_book_master.publisher_id');
-$this->db->join('tbl_category','tbl_category.cat_id=tbl_book_master.cat_id');
-return $this->db->get('tbl_book_master');
+
 				 $fir_view=$this->db->get('tbl_fir');
 		     $i=0;
 

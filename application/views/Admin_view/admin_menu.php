@@ -37,7 +37,7 @@
           <!---Menu---->
 
           <li>
-            <a href="<?php echo base_url('index.php/Admin_controller/Admin/manage_rto_database'); ?>"><i class="fa fa-hand-o-up btn warning"></i>FIR Request</a>
+        <!--    <a href="<?php echo base_url('index.php/Admin_controller/Admin/manage_rto_database'); ?>"><i class="fa fa-hand-o-up btn warning"></i>FIR Request</a>-->
         <!---Menu---->
           <script type="text/css">
           .a

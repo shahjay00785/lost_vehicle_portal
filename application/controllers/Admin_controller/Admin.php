@@ -171,12 +171,18 @@ public function manage_rto_database(){
 
 				$count=$data->vehicle_issue_number;
 				if($query->num_rows()>0){
-					echo "ok";
+					$this->session->set_flashdata('message','match with RTO Database');
+					redirect('Admin_controller/Admin/manage_rto_database');
+
+			}
+			else {
+				$this->session->set_flashdata('message','nO MATCH');
+				redirect('Admin_controller/Admin/manage_rto_database');
+		
 			}
 
-			if($query->num_rows()<0){
-				echo "not ok";
-		}
+
+
 
 
 				}

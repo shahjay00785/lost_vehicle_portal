@@ -106,7 +106,7 @@
           <!-- /.row -->
 
   <div class="col-lg-12">
-      <h2>User Views <a href="<?php echo base_url('index.php/Admin_controller/admin/manage_vehicle_view'); ?>"> <img class="img-circle" src="<?php echo base_url('img/icon/add.png'); ?>" width="50px" height="50px">  </a></h2>
+      <h2>Missing Vehicles Views <a href="<?php echo base_url('index.php/Admin_controller/admin/manage_vehicle_view'); ?>"> <img class="img-circle" src="<?php echo base_url('img/icon/add.png'); ?>" width="50px" height="50px">  </a></h2>
       <div class="table-responsive">
         <table class="table table-bordered table-hover table-striped">
           <thead>
