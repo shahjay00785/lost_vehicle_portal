@@ -198,7 +198,7 @@
                 <li><a href="#">&raquo;</a></li>
 							-->
 							<?php echo $paging_string; ?>
-              
+
               </ul>
             </div>
           </div>

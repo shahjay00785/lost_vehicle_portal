@@ -23,7 +23,7 @@
         <ol class="breadcrumb">
           <li>
             <i class="fa fa-dashboard"></i>  <a href="">Dashboard</a>
-
+           <h2 align="center" style="color:green;"> <?php echo $this->session->flashdata('message'); ?> </h2>
 
 
 

@@ -135,7 +135,10 @@ li.dropdown {
 <h2 align="center" style="color:green;"> <?php echo $this->session->flashdata('message'); ?> </h2>
 <br />
 
+
+
   <div class="left">
+    <h2> Records </h2>
     <table class="table table-striped table-hover table-bordered">
     <thead class="thead-dark">
       <tr>

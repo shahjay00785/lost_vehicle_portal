@@ -178,7 +178,7 @@ public function manage_rto_database(){
 			else {
 				$this->session->set_flashdata('message','nO MATCH');
 				redirect('Admin_controller/Admin/manage_rto_database');
-		
+
 			}
 
 
@@ -200,13 +200,15 @@ public function manage_rto_database(){
 							$data['rto_id']=$count_q->rto_id;
 							$data['fir_number']="abc123";
 							$data['fir_date']=date('Y-m-d H:i:s');
-							redirect('Admin_controller/Admin/fir_view');
+
 
 
 			}
 
 
 			 $this->db->insert('tbl_fir',$data);
+			 $this->session->set_flashdata('message','FIR generation sucessfully');
+			 redirect('Admin_controller/Admin/fir_view');
 		 }
 
 		 public function fir_view(){
