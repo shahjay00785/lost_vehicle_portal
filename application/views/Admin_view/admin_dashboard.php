@@ -46,8 +46,17 @@
                   <i class="fa fa-comments fa-5x"></i>
                 </div>
                 <div class="col-xs-9 text-right">
-                  <div class="huge">26</div>
-                  <div>New Comments!</div>
+                  <div class="huge">
+                  <?php
+
+                  $number=$this->db->query("SELECT COUNT(*) FROM tbl_fir");
+                  echo $number->num_rows();
+
+
+                  ?>
+
+                  </div>
+                  <div>Number  Of FIR !</div>
                 </div>
               </div>
             </div>

@@ -94,7 +94,7 @@
 
 
 				 $fir_view=$this->db->query("SELECT
-DISTINCT fir.fir_id,fir.fir_number,fir.fir_date,rto.vehicle_issue_number,user.user_aadhar_number,rto.vehicle_issue_number,user.user_name from
+ fir.fir_id,fir.fir_number,fir.fir_date,rto.vehicle_issue_number,user.user_aadhar_number,rto.vehicle_issue_number,user.user_name from
 tbl_fir fir, tbl_rto_database rto,tbl_user_side user
 where rto.rto_id=fir.fir_id AND  user.user_aadhar_number=rto.user_aadhar_number;");
 		     $i=0;
