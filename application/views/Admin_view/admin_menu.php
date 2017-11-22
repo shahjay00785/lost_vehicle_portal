@@ -30,7 +30,7 @@
         <li>
 
           <li class="">
-            <a href="<?php echo base_url('index.php/Admin_controller/Admin/search_bar'); ?>"><i class="fa fa-fw fa-dashboard"></i>Search</a>
+            
 
             <li class="">
               <a href="<?php echo base_url('index.php/Admin_controller/Admin/manage_rto_database'); ?>"><i class="fa fa-hand-o-down"></i>FIR Request</a>
