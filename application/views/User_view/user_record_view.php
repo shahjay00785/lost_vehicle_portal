@@ -145,7 +145,7 @@ li.dropdown {
         <th>#</th>
         <th>Fir NUmber</th>
         <th>Fir Date</th>
-        <th>Fir Status</th>
+
       </tr>
     </thead>
 
@@ -162,7 +162,7 @@ li.dropdown {
         <td><?php echo $row_fir->fir_id; ?></td>
         <td><?php echo $row_fir->fir_number; ?></td>
         <td><?php echo $row_fir->fir_date; ?></td>
-        <td>pending</td>
+
       </tr>
 
    </tbody>

@@ -16,7 +16,7 @@
   					}
   					else{
               ?>
-                <li><a href="information.html">Information</a>Login</li>
+              <!--  <li><a href="information.html">Information</a>Login</li> -->
             <?php
   					}
   					?>

@@ -34,10 +34,14 @@
           <div class="row">
               <div class="col-lg-6">
 
+
+
+
                   <form role="form" method="post" action="<?php echo base_url('index.php/Admin_controller/Admin/manage_missing_vehicle/add'); ?>">
 
                        <div class="form-group">
-                          <label>Vehicle Isssue Number</label>
+                          <label>Vehicle Isssue Number
+                            </label>
                           <input type="text" id="txt_vehicle_issue_number" name="txt_vehicle_issue_number" class="form-control">
                        </div>
 

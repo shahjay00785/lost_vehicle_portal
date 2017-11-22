@@ -154,8 +154,8 @@
 									<th>Model #</th>
 									<th>color</th>
 		              <th>Engine #</th>
-		              <th>Chasis #</th>
-									<th>Missing Date</th>
+
+
 		              <th> FIR </th>
 
 
@@ -196,9 +196,6 @@
 		           <td><?php echo $row_rto->user_driving_license_number; ?></td>
 		           <td><?php echo $row_rto->user_aadhar_number; ?></td>
 		           <td><?php echo $row_rto->vehicle_chasis_number; ?></td>
-		           <td></td>
-
-		           <td></td>
 
 		           <td> <a href="<?php echo base_url('index.php/Admin_controller/Admin/fir_generate/').$row_rto->rto_id; ?>"> FIR +</a> </td>
 		         </tr>

@@ -14,7 +14,8 @@ class User_found_controller extends CI_Controller {
 	public function manage_found_vehicle($parameter1="",$parameter2=""){
   	if(!isset($_SESSION["useremail"]))
   	{
-  		redirect(base_url().'Admin_controller/Admin');
+			$this->session->set_flashdata('message','please login first');
+		 redirect('User_controller/User_found_controller');
   	}
   	else{
   		if($parameter1=="add"){

@@ -177,7 +177,7 @@ public function manage_rto_database(){
 			}
 			else {
 				$this->session->set_flashdata('message','nO MATCH');
-				redirect('Admin_controller/Admin/manage_rto_database');
+				//redirect('Admin_controller/Admin/manage_rto_database');
 
 			}
 
@@ -198,7 +198,15 @@ public function manage_rto_database(){
 
 				foreach ($rto_data->result() as $count_q) {
 							$data['rto_id']=$count_q->rto_id;
-							$data['fir_number']="abc123";
+
+							for($i = 1; $i < 10; $i++)
+	 						{
+			 				$key = strtoupper(substr(sha1(microtime() . $i), rand(0, 5), 25));
+			 			$serial = implode("-", str_split($key, 5));
+	 						}
+
+
+							$data['fir_number']=$serial;
 							$data['fir_date']=date('Y-m-d H:i:s');
 
 

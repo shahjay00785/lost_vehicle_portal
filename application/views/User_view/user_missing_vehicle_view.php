@@ -135,11 +135,22 @@ li.dropdown {
 <h2 align="center" style="color:green;"> <?php echo $this->session->flashdata('message'); ?> </h2>
 <br />
 
+
+  <?php
+
+    if(isset($_SESSION["useremail"])){
+    $query=$this->db->query("select * from tbl_user_side where user_name='".$_SESSION['useremail']."'");
+
+    foreach ($query->result() as $row) {
+      //echo $row->user_name;
+    }
+    }
+   ?>
   <div class="left">
 <form action="<?php echo base_url('index.php/User_controller/User_missing_controller/manage_missing_vehicle/add'); ?>" method="post">
   <fieldset>
     <legend>Missing Vehicle Details</legend>
-    Vehicle Issue Number:<br>
+    Vehicle Issue Number:
       <input type="text" id="txt_vehicle_issue_number" name="txt_vehicle_issue_number" class="form-control">
     <br>
     Vehicle Engine Number:<br>
@@ -150,11 +161,28 @@ li.dropdown {
 
     <br>
     User Driving License Number:<br>
-    <input type="text" id="txt_user_driving_license_number" name="txt_user_driving_license_number" class="form-control">
+    <input type="text" id="txt_user_driving_license_number" name="txt_user_driving_license_number" class="form-control"
+    value="<?php
+
+    if(isset($_SESSION["useremail"]))
+    {
+      echo $row->user_driving_license_number;
+    }
+
+
+     ?>" >
     <br>
     User Aadhar Number:<br>
-    <input type="text" id="txt_user_aadhar_number" name="txt_user_aadhar_number" class="form-control">
+    <input type="text" id="txt_user_aadhar_number" name="txt_user_aadhar_number" class="form-control"
+    value="<?php
 
+    if(isset($_SESSION["useremail"]))
+    {
+      echo $row->user_aadhar_number;
+    }
+
+
+     ?>" >
     Vehicle Lost State:<br>
     <select class="form-group" id="txt_lost_city_name" name="txt_lost_state_name">
         <option value="Gujarat">Gujarat</option>

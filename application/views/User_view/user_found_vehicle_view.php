@@ -123,6 +123,7 @@ li.dropdown {
 <?php include_once('user_header_view.php'); ?>
 <div>
 <br />
+<h2 align="center" style="color:green;"> <?php echo $this->session->flashdata('message'); ?> </h2>
 <br />
 <center>
   <div class="w3-content w3-section" style="max-width:800px max-height:20px">

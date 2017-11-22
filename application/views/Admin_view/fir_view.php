@@ -75,8 +75,6 @@
 		              <th>#</th>
 		              <th> Fir Number</th>
 									<th> Fir Date  </th>
-									<th>User Name  </th>
-						      <th> Vehicle Issue Number </th>
 
 
 
@@ -93,11 +91,12 @@
 
 
 
-				 $fir_view=$this->db->query("SELECT
- fir.fir_id,fir.fir_number,fir.fir_date,rto.vehicle_issue_number,user.user_aadhar_number,rto.vehicle_issue_number,user.user_name from
-tbl_fir fir, tbl_rto_database rto,tbl_user_side user
-where rto.rto_id=fir.fir_id AND  user.user_aadhar_number=rto.user_aadhar_number;");
-		     $i=0;
+			// $fir_view=$this->db->query("SELECT
+ //fir.fir_id,fir.fir_number,fir.fir_date,rto.vehicle_issue_number,user.user_aadhar_number,rto.vehicle_issue_number,user.user_name from
+//tbl_fir fir, tbl_rto_database rto,tbl_user_side user
+//where rto.rto_id=fir.fir_id AND  user.user_aadhar_number=rto.user_aadhar_number;");/*
+         $fir_view=$this->db->query("select * from  tbl_fir");
+	 	     $i=0;
 
 		     foreach ($fir_view->result_array()  as $row_fir)
 		     {
@@ -118,11 +117,11 @@ where rto.rto_id=fir.fir_id AND  user.user_aadhar_number=rto.user_aadhar_number;
 		           <td><?php echo $row_fir['fir_id']; ?></td>
 		           <td><?php echo $row_fir['fir_number']; ?></td>
 		           <td><?php echo $row_fir['fir_date']; ?></td>
-               <td><?php echo $row_fir['user_name']; ?></td>
-               <td><?php echo $row_fir['vehicle_issue_number']; ?></td>
 
 
-		           <td></td>
+
+
+
 
 
 		         </tr>

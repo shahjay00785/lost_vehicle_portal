@@ -23,6 +23,9 @@
         <li>
           <a href="<?php echo base_url('index.php/Admin_controller/Admin/manage_rto_database'); ?>">RTO Database</a>
         </li>
+        <li>
+          <a href="<?php echo base_url('index.php/Admin_controller/Admin/fir_view'); ?>">FIR VIEW</a>
+        </li>
 
 
           </ul>
@@ -30,7 +33,7 @@
         <li>
 
           <li class="">
-            
+
 
             <li class="">
               <a href="<?php echo base_url('index.php/Admin_controller/Admin/manage_rto_database'); ?>"><i class="fa fa-hand-o-down"></i>FIR Request</a>
