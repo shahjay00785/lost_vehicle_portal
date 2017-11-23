@@ -29,20 +29,21 @@ class User_missing_controller extends CI_Controller {
 		 $data['vehicle_lost_city']=$this->input->post('txt_lost_city_name');
 		 $data['vehicle_lost_time']=$this->input->post('txt_vehicle_lost_time');
 		 $this->db->insert('tbl_missing_vehicle',$data);
-
+		 $this->session->set_flashdata('message','added data sucessfully');
+		 redirect('User_controller/User_missing_controller');
 
 	 }
 
 	 if($parameter1=="delete"){
 		 $this->db->where('missing_vehicle_id',$parameter2);
 		 $this->db->delete('tbl_missing_vehicle');
-		 //redirect('Admin_controller/Admin/manage_user_side');
+		 redirect('Admin_controller/Admin/manage_missing_vehicle');
 	 }
 
 
 
 		 $page_data['missing_vehicle_view']=$this->db->get('tbl_missing_vehicle');
-		 //$this->load->view('Admin_view/missing_vehicle_view',$page_data);
+		 $this->load->view('Admin_view/missing_vehicle_view',$page_data);
 	 }
 	}
 

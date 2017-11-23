@@ -21,7 +21,7 @@
           <a href="<?php echo base_url('index.php/Admin_controller/Admin/manage_found_vehicle'); ?>">Found Vehicle Info</a>
         </li>
         <li>
-          <a href="<?php echo base_url('index.php/Admin_controller/Admin/manage_rto_database'); ?>">RTO Database</a>
+          <a href="<?php echo base_url('index.php/Admin_controller/Admin/manage_rto_new'); ?>">RTO Database</a>
         </li>
         <li>
           <a href="<?php echo base_url('index.php/Admin_controller/Admin/fir_view'); ?>">FIR VIEW</a>

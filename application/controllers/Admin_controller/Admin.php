@@ -10,6 +10,52 @@ class Admin extends CI_Controller {
 	}
 
 
+
+
+	/*public function manage_rto_new($parameter1="",$parameter2=""){
+		  $this->load->view('Admin_view/RTO_NEW');
+ 	}*/
+
+
+	public function manage_rto_new($parameter1="",$parameter2=""){
+  	if(!isset($_SESSION["useremail"]))
+  	{
+  		redirect(base_url().'Admin_controller/Admin');
+  	}
+  	else{
+  		if($parameter1=="add"){
+
+				$data['vehicle_name']=$this->input->post('txt_veh_name');
+				$data['vehicle_type']=$this->input->post('txt_veh_type');
+				$data['vehicle_color']=$this->input->post('txt_veh_color');
+				$data['vehicle_compnay']=$this->input->post('txt_veh_company');
+				$data['vehicle_issue_number']=$this->input->post('txt_vehicle_issue_number');
+  		$data['vehicle_engine_number']=$this->input->post('txt_vehicle_engine_number');
+  		$data['vehicle_chasis_number']=$this->input->post('txt_vehicle_chasis_number');
+ 	  	$data['user_driving_license_number']=$this->input->post('txt_user_driving_license_number');
+  		$data['user_aadhar_number']=$this->input->post('txt_user_aadhar_number');
+  		$data['date_of_registration']=$this->input->post('txt_date_registration');
+ 		$data['issue_state']=$this->input->post('txt_lost_state_name');
+ 		$data['issue_city']=$this->input->post('txt_lost_city_name');
+ 		//$data['vehicle_lost_time']=$this->input->post('txt_vehicle_lost_time');
+  		$this->db->insert('tbl_rto1_database',$data);
+  		redirect('Admin_controller/Admin/manage_rto_new');
+
+  	}
+
+  	if($parameter1=="delete"){
+  		$this->db->where('rto_id',$parameter2);
+  	  $this->db->delete('tbl_rto_database');
+  		//redirect('Admin_controller/Admin/manage_user_side');
+  	}
+
+
+
+  		$page_data['missing_vehicle_view']=$this->db->get('tbl_rto_database');
+  		$this->load->view('Admin_view/RTO_new',$page_data);
+  	}
+  }
+
  public function manage_user_side($parameter1="",$parameter2=""){
 	 if(!isset($_SESSION["useremail"]))
 	 {

@@ -274,7 +274,7 @@ li.dropdown {
         <div class="margueLeftleft">
         <marquee behavior="scroll" direction="up" onmouseover="this.stop();"onmouseout="this.start();">
           <?php
-          $page_data=$this->db->get('tbl_missing_vehicle');
+          $page_data=$this->db->get('tbl_found_vehicle');
 
             foreach ($page_data->result() as $data) {
                 echo $data->vehicle_issue_number;

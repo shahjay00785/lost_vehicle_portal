@@ -40,7 +40,8 @@ class User_found_controller extends CI_Controller {
  				}
 
   		$this->db->insert('tbl_found_vehicle',$data);
-
+			$this->session->set_flashdata('message','added data sucessfully');
+			redirect('User_controller/User_found_controller');
   	//	redirect('Admin_controller/Admin/manage_found_vehicle');
 
   	}
@@ -54,7 +55,7 @@ class User_found_controller extends CI_Controller {
 
 
   		$page_data['found_vehicle_view']=$this->db->get('tbl_found_vehicle');
-  		$this->load->view('Admin_view/found_vehicle_view',$page_data);
+  		$this->load->view('User_view/found_vehicle_view',$page_data);
   	}
   }
 

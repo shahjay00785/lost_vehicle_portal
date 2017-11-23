@@ -11,7 +11,7 @@
 			catch(e){
 				try{
 				xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
-				}
+			}
 				catch(e){-
 					xmlhttp=false;
 				}
@@ -150,9 +150,10 @@
 		              <th>#</th>
 		              <th>Issue #</th>
 									<th>Vehicle Name  </th>
-									<th>User Name  </th>
+									<th>Chasis #  </th>
 									<th>Model #</th>
 									<th>color</th>
+									<th>Licence # </th>
 		              <th>Engine #</th>
 
 
@@ -193,9 +194,12 @@
 		           <td><?php echo $row_rto->vehicle_issue_number; ?></td>
 		           <td><?php echo $row_rto->vehicle_name; ?></td>
 		           <td><?php echo $row_rto->vehicle_chasis_number; ?></td>
+							 <td><?php echo $row_rto->vehicle_model_number; ?></td>
+							 <td><?php echo $row_rto->vehicle_color; ?> </td>
+							 <td><?php echo $row_rto->vehicle_engine_number; ?> </td>
 		           <td><?php echo $row_rto->user_driving_license_number; ?></td>
-		           <td><?php echo $row_rto->user_aadhar_number; ?></td>
-		           <td><?php echo $row_rto->vehicle_chasis_number; ?></td>
+
+
 
 		           <td> <a href="<?php echo base_url('index.php/Admin_controller/Admin/fir_generate/').$row_rto->rto_id; ?>"> FIR +</a> </td>
 		         </tr>

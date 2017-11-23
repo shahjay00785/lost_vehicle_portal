@@ -90,7 +90,7 @@
               <th>Driving License</th>
               <th>phone</th>
               <th>Delete</th>
-              <th>Update</th>
+          
             </tr>
           </thead>
 
@@ -119,7 +119,7 @@
            <td><?php echo $row_user->user_driving_license_number; ?></td>
            <td><?php echo $row_user->user_phone_number; ?></td>
            <td><a href="<?php echo base_url('index.php/Admin_controller/Admin/manage_user_side/delete/').$row_user->user_id; ?>"> <img class="img-circle" src="<?php echo base_url('img/icon/delete.png'); ?>" width="50px" height="50px"> </a> </td>
-           <td><a href="<?php echo base_url('index.php/Admin_controller/Admin/manage_category/edit/').$row_user->user_id; ?>"> <img class="img-circle" src="<?php echo base_url('img/icon/update.png'); ?>" width="50px" height="50px"></a> </td>
+
          </tr>
 
 

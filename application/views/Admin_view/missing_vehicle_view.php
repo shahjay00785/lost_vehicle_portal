@@ -19,6 +19,7 @@
                   <h1 class="page-header">
                       Missing Vehicle Registration
                   </h1>
+                  	<h2 align="center" style="color:green;"><?php echo $this->session->flashdata('message'); ?></h2>
                   <ol class="breadcrumb">
                       <li>
                           <i class="fa fa-dashboard"></i>  <a href="<?php echo base_url('index.php/Admin_controller/Admin/manage_dashboard'); ?>">Dashboard</a>
@@ -127,7 +128,7 @@
               <th>City</th>
 
               <th>Delete</th>
-              <th>Update</th>
+
             </tr>
           </thead>
 
@@ -160,8 +161,8 @@
            <td><?php echo $row_missing_vehicle->vehicle_lost_state; ?></td>
            <td><?php echo $row_missing_vehicle->vehicle_lost_city; ?></td>
 
-           <td><a href="<?php echo base_url('index.php/Admin_controller/Admin/manage_user_side/delete/').$row_missing_vehicle->missing_vehicle_id; ?>"> <img class="img-circle" src="<?php echo base_url('img/icon/delete.png'); ?>" width="50px" height="50px"> </a> </td>
-           <td><a href="<?php echo base_url('index.php/Admin_controller/Admin/manage_category/edit/').$row_missing_vehicle->missing_vehicle_id; ?>"> <img class="img-circle" src="<?php echo base_url('img/icon/update.png'); ?>" width="50px" height="50px"></a> </td>
+           <td><a href="<?php echo base_url('index.php/Admin_controller/Admin/manage_missing_vehicle/delete/').$row_missing_vehicle->missing_vehicle_id; ?>"> <img class="img-circle" src="<?php echo base_url('img/icon/delete.png'); ?>" width="50px" height="50px"> </a> </td>
+
          </tr>
 
 
